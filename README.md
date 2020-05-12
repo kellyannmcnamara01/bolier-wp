@@ -1,1 +1,1 @@
-# bolier-wp
+# boiler-wp
