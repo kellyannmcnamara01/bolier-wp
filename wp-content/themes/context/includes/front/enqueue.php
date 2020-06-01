@@ -1,6 +1,5 @@
 <?php
 
-	echo time();
 
 	function context_enqueue(){
 		$uri = get_theme_file_uri();
