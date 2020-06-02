@@ -4,17 +4,24 @@
 
     <!-- Content
     ============================================= -->
-    <section id="content" style="padding: 30px; background: lightpink;">
-
-        <!-- Posts
-        ============================================= -->
-        <?php get_template_part( 'partials/reusables/posts' ); ?>
+    <section id="content" style="padding: 30px; background: hotpink;">
 
 
+        <main class="page-content" style="padding: 30px; background: lightpink;">
 
-        <!-- Pagination
-        ============================================= -->
-        <?php get_template_part( 'partials/reusables/pagination-posts' ); ?>
+
+            <!-- Posts
+            ============================================= -->
+            <?php get_template_part( 'partials/reusables/posts' ); ?>
+
+
+
+            <!-- Pagination
+            ============================================= -->
+            <?php get_template_part( 'partials/reusables/pagination-posts' ); ?>
+
+
+        </main>
 
 
         <!-- Sidebar

@@ -1,4 +1,4 @@
-<div class="author-card" style="padding: 30px; background: darkblue;">
+<div class="author-card" style="padding: 30px; background: lightcoral;">
 	<a href="<?php echo $author_URL; ?>"><?php the_author(); ?></a>
 	<div class="author-card__avatar">
 		<?php
