@@ -1,15 +1,20 @@
 <!-- Sidebar
 ============================================= -->
-<div class="sidebar nobottommargin col_last">
-  <div class="sidebar-widgets-wrap">
+<?php
+    if( is_active_sidebar( 'context_sidebar' ) ){ 
+    	?>
 
-    <?php
+			<aside class="sidebar" style="background: plum; color: white; padding: 30px; font-size: 16px;">
+				<?php
 
-      if( is_active_sidebar( 'context_sidebar' ) ){
-        dynamic_sidebar( 'context_sidebar' );
-      }
+			      if( is_active_sidebar( 'context_sidebar' ) ){
+			        dynamic_sidebar( 'context_sidebar' );
+			      }
 
-    ?>
-    
-  </div>
-</div><!-- .sidebar end -->
+			    ?>
+			</aside>
+
+		<?php 
+	} 
+?>
+<!-- .sidebar end -->
