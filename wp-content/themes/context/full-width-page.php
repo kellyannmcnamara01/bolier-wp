@@ -1,3 +1,10 @@
+<?php 
+/*
+ * Template Name: Full Width Page
+ * Template Post Type: Post
+ */
+?>
+
 <!-- Head
 ============================================= -->
 <?php get_header(); ?>
@@ -61,8 +68,6 @@
 
 		</main>
 		<!-- Page Content [END] -->
-
-		<?php get_sidebar(); ?>
 
 	</section>
 	<!-- Content [END] -->

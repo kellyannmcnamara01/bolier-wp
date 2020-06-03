@@ -12,10 +12,10 @@
 
     <!-- Content
     ============================================= -->
-    <section id="content" style="padding: 30px; background: hotpink;">
+    <section id="content" style="padding: 30px; background: tan;">
 
 
-        <main class="page-content" style="padding: 30px; background: lightpink;">
+        <main class="page-content" style="padding: 30px; background: wheat;">
 
 
             <h2>Opps!</h2>
