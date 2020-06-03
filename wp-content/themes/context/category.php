@@ -5,15 +5,15 @@
 
     <!-- Header
     ============================================= -->
-    <?php get_template_part( 'partials/layout/header' ); ?>
+    <?php get_template_part( 'partials/layout/header', 'category' ); ?>
 
 
     <!-- Content
     ============================================= -->
-    <section id="content" style="padding: 30px; background: hotpink;">
+    <section id="content" style="padding: 30px; background: steelblue;">
 
 
-        <main class="page-content" style="padding: 30px; background: lightpink;">
+        <main class="page-content" style="padding: 30px; background: lightsteelblue;">
 
 
             <!-- Posts

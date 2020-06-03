@@ -1,12 +1,21 @@
 <?php /* for single custom post types only */ ?>
 
-<!-- Header
+<!-- Head
 ============================================= -->
 <?php get_header(); ?>
+
+
+	<!-- Header
+    ============================================= -->
+    <?php get_template_part( 'partials/layout/header', 'post' ); ?>
+
+
 
 	<!-- Content
 	============================================= -->
 	<section id="content" style="padding: 30px; background: lightpink;">
+
+
 
 		<!-- Post Content
 		============================================= -->
@@ -53,27 +62,19 @@
 						<div class="post-content__content" style="padding: 30px; background: palevioletred;">
 							<?php the_content(); ?>
 
-							<?php /* wp_link_pages() to paginage pages with the "page break" block in the editor into different pages */ ?>
-							<?php 
+							<!-- wp_link_pages
+							============================================= -->
+							<?php get_template_part( 'partials/functions/wp-link-pages' ); ?>
+							<!-- wp_link_pages [END] -->
 
-								$defaults = array(
-									'before'			=>	'<div class="post-content__pagination">',
-									'after'				=>	'</div>',
-									'link_before'		=>	'',
-									'link_after'		=>	'',
-									'next_or_number'	=>	'number',
-									'separator'			=>	' ',
-									'nextpagelink'		=>	__( 'Next Page', 'context' ),
-									'previouspagelink'	=>	__( 'Previous Page', 'context' ),
-									'pagelink'			=>	'%',
-									'echo'				=>	1
-
-								);
-
-							?>
-							<?php wp_link_pages( $defaults ); ?>
 						</div>
 						<!-- Post Content Content [END] -->
+
+
+						<!-- Tags
+						============================================= -->
+						<?php get_template_part( 'partials/reusables/tags' ); ?>
+						<!-- Tags [END] -->
 
 
 

@@ -30,9 +30,3 @@
     ============================================= -->
     <?php get_template_part( 'partials/layout/top-bar' ); ?>
     <!-- Top Bar [END] -->
-
-
-    <!-- Header
-    ============================================= -->
-    <?php get_template_part( 'partials/layout/header' ); ?>
-    <!-- Header [END] -->
