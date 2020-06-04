@@ -34,7 +34,8 @@
         ============================================= */
 		$wp_customize->add_section( 'context_social_section', [
 			'title'				=> __( 'Social Settings', 'context' ),
-			'priority'			=> 30
+			'priority'			=> 30,
+            'panel'             => 'context-panel'
 		] );
 
 

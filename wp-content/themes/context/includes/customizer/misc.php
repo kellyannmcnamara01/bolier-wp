@@ -1,24 +1,25 @@
 <?php
 
-	function context_misc_customizer_section( $wp_customize ){
+    	function context_misc_customizer_section( $wp_customize ){
 
 		/* Social Settings
         ============================================= */
-		$wp_customize->add_setting( 'context_header_show_search', [
-			'default'			=>	'yes'
-		] );
+    	$wp_customize->add_setting( 'context_header_show_search', [
+    	   'default'			=>	'yes',
+           'transport'          =>  'postMessage'
+    	] );
 
-		$wp_customize->add_setting( 'context_footer_copyright', [
-			'default'			=>	'Copyright &copy; 2020 All Rights Reserved'
-		] );
+    	$wp_customize->add_setting( 'context_footer_copyright', [
+    		'default'			=>	'Copyright &copy; 2020 All Rights Reserved'
+    	] );
 
-		$wp_customize->add_setting( 'context_footer_tos_page', [
-			'default'			=>	0
-		] );
+    	$wp_customize->add_setting( 'context_footer_tos_page', [
+    		'default'			=>	0
+    	] );
 
-		$wp_customize->add_setting( 'context_footer_privacy_page', [
-			'default'			=>	0
-		] );
+    	$wp_customize->add_setting( 'context_footer_privacy_page', [
+    		'default'			=>	0
+    	] );
 
 
 
@@ -26,7 +27,8 @@
         ============================================= */
         $wp_customize->add_section( 'context_misc_section', [
         	'title'				=>	__( 'Miscellaneous Settings', 'context' ),
-        	'priority'			=>	30
+        	'priority'			=>	30,
+            'panel'             => 'context-panel'
         ] );
 
 
