@@ -68,7 +68,6 @@ gulp.task('iesass', function(){
 ============================================= */
 gulp.task('js', function(){
     return gulp.src([
-            'assets/src/scripts/jquery-1.11.2.min.js', 
             'assets/src/scripts/scripts.js'
         ])
         .pipe(concat('scripts.js'))
