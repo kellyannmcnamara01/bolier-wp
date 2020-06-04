@@ -1,3 +1,14 @@
+/* includes */
+@import "_includes";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
 body {
-	border: solid 30px blue;
+	border: solid 50px yellow;
 }
