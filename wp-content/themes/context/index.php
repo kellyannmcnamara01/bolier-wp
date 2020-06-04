@@ -16,6 +16,11 @@
         <main class="page-content" style="padding: 30px; background: lightpink;">
 
 
+            <!-- Popular Posts
+            ============================================= -->
+            <?php /* get_template_part( 'partials/reusables/posts', 'popular' ); */ ?>
+
+
             <!-- Posts
             ============================================= -->
             <?php get_template_part( 'partials/reusables/posts' ); ?>

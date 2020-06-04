@@ -1,4 +1,4 @@
-<section class="posts" style="padding: 30px; background: lightblue;">
+<section class="posts" style="padding: 30px; background: lightblue; font-size: 16px; color: white;">
 	<h2>Posts</h2>
 	<?php
 		if( have_posts() ){
