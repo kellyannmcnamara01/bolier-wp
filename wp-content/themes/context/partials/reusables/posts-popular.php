@@ -11,7 +11,7 @@
 			wpp_get_mostpopular( [
 				'wpp_start'			=>	'<div class="popular-posts">',
 				'wpp_end'			=>	'</div>',
-				'post_html'			=>	'<div class="popular-post" style="padding:30px; background: mediumorchid; 						margin-bottom: 10px;">
+				'post_html'			=>	'<div  id="popular-post-<?php the_ID(); ?>" ' . post_class( 'popular-post' ); . ' class="popular-post" style="padding:30px; background: mediumorchid; 						margin-bottom: 10px;">
 											<h3>
 												<a href="{url}" class="popular-post__title">{text_title}</a>
 												<span class="popular-post__views">Views: {views}</span>

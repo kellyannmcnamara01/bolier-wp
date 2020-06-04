@@ -34,7 +34,7 @@
 
 						<!-- Post General Infromation
 						============================================= -->
-						<div class="post-content__general-info" style="padding: 30px; background: lightsalmon;">
+						<div id="post-<?php the_ID(); ?>" <?php post_class( 'post-content__general-info' ); ?> style="padding: 30px; background: lightsalmon;">
 							<span class="post-content__date"><?php echo get_the_date(); ?></span>
 							<div class="post-content__categories"><?php the_category(); ?></div>
 							<span class="post-content__comment-count"><?php comments_number( '0' ); ?></span>

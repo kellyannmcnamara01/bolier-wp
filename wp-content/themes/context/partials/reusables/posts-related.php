@@ -18,7 +18,7 @@
 
 				?>
 
-					<div class="related-post" style="padding: 30px; margin-bottom: 10px; background: lavender; color: darkorchid;">
+					<div id="related-post-<?php the_ID(); ?>" <?php post_class( 'related-post' ); ?> style="padding: 30px; margin-bottom: 10px; background: lavender; color: darkorchid;">
 						<?php
 							if( has_post_thumbnail() ){
 								?>
