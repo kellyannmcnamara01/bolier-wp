@@ -1,6 +1,6 @@
             <!-- Footer
             ============================================= -->
-            <footer id="footer" style="background: cornflowerblue; color: white; padding: 30px; font-size: 30px;">
+            <footer id="footer" class="footer" style="background: cornflowerblue; color: white; padding: 30px; font-size: 30px;">
                 <p>--- footer content ---</p>
 
 

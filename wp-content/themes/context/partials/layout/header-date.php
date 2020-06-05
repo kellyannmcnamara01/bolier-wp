@@ -1,4 +1,4 @@
-<div style="background: mediumspringgreen; color: black; padding: 30px; font-size: 30px;">
+<div class="header--date" style="background: mediumspringgreen; color: black; padding: 30px; font-size: 30px;">
 
 	<!-- Title/Desc
     ============================================= -->

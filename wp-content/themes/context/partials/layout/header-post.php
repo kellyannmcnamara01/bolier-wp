@@ -1,4 +1,4 @@
-<div style="background: indigo; color: white; padding: 30px; font-size: 30px;">
+<div class="header--post" style="background: indigo; color: white; padding: 30px; font-size: 30px;">
 
 	<!-- Title
     ============================================= -->

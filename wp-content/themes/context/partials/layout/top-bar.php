@@ -1,4 +1,4 @@
-<div style="background: green; color: white; padding: 30px; font-size: 30px;">
+<div class="top-bar" style="background: green; color: white; padding: 30px; font-size: 30px;">
 	top bar
 
 	<!-- Logo

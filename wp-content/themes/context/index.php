@@ -11,35 +11,37 @@
     <!-- Content
     ============================================= -->
     <section id="content" style="padding: 30px; background: hotpink;">
+        <div class="row">
 
 
-        <main class="page-content" style="padding: 30px; background: lightpink;">
+            <main class="page-content col-xs-8" style="padding: 30px; background: lightpink;">
 
 
-            <!-- Popular Posts
+                <!-- Popular Posts
+                ============================================= -->
+                <?php /* get_template_part( 'partials/reusables/posts', 'popular' ); */ ?>
+
+
+                <!-- Posts
+                ============================================= -->
+                <?php get_template_part( 'partials/reusables/posts' ); ?>
+
+
+
+                <!-- Pagination
+                ============================================= -->
+                <?php get_template_part( 'partials/reusables/pagination-posts' ); ?>
+
+
+            </main>
+
+
+            <!-- Sidebar
             ============================================= -->
-            <?php /* get_template_part( 'partials/reusables/posts', 'popular' ); */ ?>
+            <?php get_sidebar(); ?>
 
-
-            <!-- Posts
-            ============================================= -->
-            <?php get_template_part( 'partials/reusables/posts' ); ?>
-
-
-
-            <!-- Pagination
-            ============================================= -->
-            <?php get_template_part( 'partials/reusables/pagination-posts' ); ?>
-
-
-        </main>
-
-
-        <!-- Sidebar
-        ============================================= -->
-        <?php get_sidebar(); ?>
-
-
+            
+        </div>
     </section>
     <!-- Content [END] -->
 

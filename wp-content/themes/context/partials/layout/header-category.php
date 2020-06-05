@@ -1,4 +1,4 @@
-<div style="background: lightslategrey; color: white; padding: 30px; font-size: 30px;">
+<div class="header--category" style="background: lightslategrey; color: white; padding: 30px; font-size: 30px;">
 
 	<!-- Title/Desc
     ============================================= -->

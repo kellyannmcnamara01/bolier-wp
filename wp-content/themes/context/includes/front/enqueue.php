@@ -5,14 +5,17 @@
 		$uri = get_theme_file_uri();
 		$ver = CONTEXT_DEV_MODE ? time() : false;
 
-		// style sheets
-		wp_register_style( 'context_google_font', 'https://fonts.googleapis.com/css2?family=Fira+Sans', [], $ver );
+
+		/* Styles
+		============================================= */
 		wp_register_style( 'context_styles', $uri . '/assets/dist/css/main.css', [], $ver );
 
-		wp_enqueue_style( 'context_google_font' );
 		wp_enqueue_style( 'context_styles' );
+		
+		
 
-		//scripts
+		/* Scripts
+		============================================= */
 		wp_register_script( 'context_scripts', $uri . '/assets/dist/scripts/scripts.js', [], $ver, true );
 
 		wp_enqueue_script( 'jquery' );

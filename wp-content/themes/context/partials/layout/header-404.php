@@ -1,4 +1,4 @@
-<div style="background: grey; color: white; padding: 30px; font-size: 30px;">
+<div class="header header--404" style="background: grey; color: white; padding: 30px; font-size: 30px;">
 
 	<!-- Title
     ============================================= -->

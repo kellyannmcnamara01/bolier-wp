@@ -13,17 +13,18 @@
     <!-- Content
     ============================================= -->
     <section id="content" style="padding: 30px; background: tan;">
+        <div class="row">
+
+            <main class="page-content col-xs-12" style="padding: 30px; background: wheat;">
 
 
-        <main class="page-content" style="padding: 30px; background: wheat;">
+                <h2>Opps!</h2>
 
 
-            <h2>Opps!</h2>
+            </main>
 
-
-        </main>
-
-
+            
+        </div>
     </section>
     <!-- Content [END] -->
 

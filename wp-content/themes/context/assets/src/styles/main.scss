@@ -10,5 +10,12 @@ html {
 }
 
 body {
-	border: solid 50px yellow;
+	@extend %body;
+}
+
+.wrapper {
+	max-width: $desktop-medium-width;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
 }

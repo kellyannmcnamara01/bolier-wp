@@ -19,22 +19,24 @@
 	<!-- Content
 	============================================= -->
 	<section id="content" style="padding: 30px; background: chartreuse;">
+		<div class="row">
+
+			
+			<!-- Page Content
+			============================================= -->
+			<main class="post-content col-xs-12" style="background: gold; color: white; padding: 30px; font-size: 16px;">
+
+				<?php
+					
+					
+
+				?>
+
+			</main>
+			<!-- Page Content [END] -->
 
 
-
-		<!-- Page Content
-		============================================= -->
-		<main class="post-content" style="background: gold; color: white; padding: 30px; font-size: 16px;">
-
-			<?php
-				
-				
-
-			?>
-
-		</main>
-		<!-- Page Content [END] -->
-
+		</div>
 	</section>
 	<!-- Content [END] -->
 

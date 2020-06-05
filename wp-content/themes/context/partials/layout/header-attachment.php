@@ -1,4 +1,4 @@
-<div style="background: yellowgreen; color: white; padding: 30px; font-size: 30px;">
+<div class="header--attachment" style="background: yellowgreen; color: white; padding: 30px; font-size: 30px;">
 
 	<!-- Title
     ============================================= -->

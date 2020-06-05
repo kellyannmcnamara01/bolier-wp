@@ -1,4 +1,4 @@
-<div style="background: plum; color: white; padding: 30px; font-size: 30px;">
+<div class="header--search" style="background: plum; color: white; padding: 30px; font-size: 30px;">
 
 	<!-- Title
     ============================================= -->
