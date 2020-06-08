@@ -1,7 +1,5 @@
 # Boiler WP
 
-##wish list
-- scroll animation that works in all browsers
-- ie9 falback for flexgrid
+##Ensuring IE Styling
+- after the closing div of every "row" insure you add a div with the class clear-float
 
-## checklist

@@ -12,7 +12,14 @@
 		wp_register_style( 'context_ie_styles', $uri . '/assets/dist/css/ie-main.css', [], $ver );
 
 		wp_enqueue_style( 'context_styles' );
-		wp_enqueue_style( 'context_ie_styles' );
+
+		?>
+
+		<!--[if lte IE 9]>
+			<?php wp_enqueue_style( 'context_ie_styles' ); ?>
+		<![endif]-->
+
+		<?php
 		
 		
 
