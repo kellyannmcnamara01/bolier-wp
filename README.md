@@ -5,9 +5,6 @@
 - Elements that are targeted by js should have a duplicated class name with the addtiona of `js--` in front. An example of that is `clas-name js--class-name`, this way the scss will not get cluttered with the addtional `js--` and it is easier for a dev to see what elements within the html are targeted by js. This being said if there is a popup and a popup button, you only need to add the addtional `js--` to the button, which is the trigger. 
 
 
-=============================================
-
-
 ## Accessibility
 
 ### E-readers text
@@ -15,9 +12,6 @@ The global class `e-reader-only` will visually hide anything it is attached to b
 
 ### Skip to main content btn
 Part of Context's accessibility standards is to insure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is citical that this is working on every template. 
-
-
-=============================================
 
 
 ## Ensuring IE Styling
