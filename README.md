@@ -10,10 +10,10 @@
 
 ## Accessibility
 
-E-readers text
+### E-readers text
 The global class `e-reader-only` will visually hide anything it is attached to but still allows an e-reader to get the content in order of the html. Best used on `div` or `span` tags
 
-Skip to main content btn
+### Skip to main content btn
 Part of Context's accessibility standards is to insure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is citical that this is working on every template. 
 
 
