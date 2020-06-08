@@ -1,0 +1,148 @@
+/* Text Base
+============================================= */
+%text-base {
+	color: $black;
+	font-family: $primary-font;
+	@include typesmooth;
+}
+
+
+
+/* Headings
+============================================= */
+%heading-one {
+	@extend %text-base;
+}
+
+%heading-two {
+	@extend %text-base;
+}
+
+%heading-three {
+	@extend %text-base;
+}
+
+%heading-four {
+	@extend %text-base;
+}
+
+%heading-five {
+	@extend %text-base;
+}
+
+%heading-six {
+	@extend %text-base;
+}
+
+
+
+/* Body
+============================================= */
+%body {
+	@extend %text-base;
+}
+
+%body--large {
+	@extend %body;
+}
+
+%body--small {
+	@extend %body;
+}
+
+%quote-text {
+	@extend %text-base;
+}
+
+%link-text {
+	@extend %text-base;
+}
+
+
+
+/* Nav
+============================================= */
+%nav-link {
+	@extend %text-base;
+}
+
+
+
+/* Base Styles
+============================================= */
+p {
+	@extend %body;
+}
+
+a {
+	@extend %link-text;
+}
+
+strong {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+button {
+	@extend %link-text;
+}
+
+
+
+/* Classes
+============================================= */
+.heading-one {
+	@extend %heading-one;
+}
+
+.heading-two {
+	@extend %heading-two;
+}
+
+.heading-three {
+	@extend %heading-three;
+}
+
+.heading-four {
+	@extend %heading-four;
+}
+
+.heading-five {
+	@extend %heading-five;
+}
+
+.heading-six {
+	@extend %heading-six;
+}
+
+.large-text {
+	@extend %body--large;
+}
+
+.small-text {
+	@extend %body--small;
+}
+
+.quote-text {
+	@extend %quote-text;
+}
+
+.link-text {
+	@extend %link-text;
+}
+
+.nav-link {
+	@extend %nav-link;
+}
+
+.e-reader-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}

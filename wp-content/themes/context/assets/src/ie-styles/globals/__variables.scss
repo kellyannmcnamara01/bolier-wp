@@ -1,0 +1,67 @@
+/* REM Cheat Sheet
+============================================= */
+// 0.675rem = 10px;
+// 0.875rem = 14px;
+// 1.125rem = 18px;
+// 1.3125rem = 21px;
+
+
+
+/* Fonts
+============================================= */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=block');
+
+$primary-font: 'Roboto', sans-serif;
+
+
+
+/* Colours
+============================================= */
+$black: #000;
+$white: #fff;
+
+
+
+/* Gradients
+============================================= */
+$gradient: linear-gradient(180deg, rgba($white, 1) 0%, rgba($white, 0) 100%);
+
+
+
+/* Responive Sizes
+============================================= */
+$phone-width: 320px;
+$phone-large-width: 556px;
+$tablet-small-width: 675px;
+$tablet-width: 768px;
+$tablet-large-width: 860px;
+$tablet-xlarge-width: 1024px;
+$desktop-small-width: 1200px;
+$desktop-medium-width: 1400px;
+$desktop-large-width: 1600px;
+$desktop-xlarge-width: 1800px;
+
+
+
+/* Grid Vars
+============================================= */
+$row-gutter-width: 1rem;
+$row-gutter-width--total: calc( #{$row-gutter-width} * 2 );
+
+$col-gutter-width: 1rem;
+$col-gutter-width--total: calc( #{$col-gutter-width} * 2 );
+
+$width-1: 8.33333333%;
+$width-2: 16.66666667%;
+$width-3: 25%;
+$width-4: 33.33333333%;
+$width-5: 41.66666667%;
+$width-6: 50%;
+$width-7: 58.33333333%;
+$width-8: 66.66666667%;
+$width-9: 75%;
+$width-10: 83.33333333%;
+$width-11: 91.66666667%;
+$width-12: 100%;
+
+

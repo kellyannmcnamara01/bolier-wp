@@ -19,6 +19,7 @@
 	<!-- Content
 	============================================= -->
 	<section id="content" style="padding: 30px; background: chartreuse;">
+		
 		<div class="row">
 
 			<!-- Page Content
@@ -70,6 +71,10 @@
 
 			
 		</div>
+
+        <!-- IMPORTANT: include clear float below every row -->
+        <div class="clear-float"></div> 
+        
 	</section>
 	<!-- Content [END] -->
 

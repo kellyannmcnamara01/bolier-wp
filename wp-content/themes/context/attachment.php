@@ -12,6 +12,7 @@
 	<!-- Content
 	============================================= -->
 	<section id="content" style="padding: 30px; background: pink;">
+		
 		<div class="row">
 
 			<!-- Post Content
@@ -63,6 +64,10 @@
 
 			
 		</div>
+
+        <!-- IMPORTANT: include clear float below every row -->
+        <div class="clear-float"></div> 
+
 	</section>
 	<!-- Content [END] -->
 

@@ -13,6 +13,7 @@
     <!-- Content
     ============================================= -->
     <section id="content" style="padding: 30px; background: tan;">
+        
         <div class="row">
 
             <main class="page-content col-xs-12" style="padding: 30px; background: wheat;">
@@ -23,8 +24,11 @@
 
             </main>
 
-            
         </div>
+
+        <!-- IMPORTANT: include clear float below every row -->
+        <div class="clear-float"></div> 
+
     </section>
     <!-- Content [END] -->
 

@@ -11,6 +11,7 @@
     <!-- Content
     ============================================= -->
     <section id="content" style="padding: 30px; background: steelblue;">
+        
         <div class="row">
 
             <main class="page-content col-xs-8" style="padding: 30px; background: lightsteelblue;">
@@ -36,6 +37,10 @@
 
             
         </div>
+
+        <!-- IMPORTANT: include clear float below every row -->
+        <div class="clear-float"></div> 
+
     </section>
     <!-- Content [END] -->
 
