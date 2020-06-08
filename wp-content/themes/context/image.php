@@ -11,7 +11,7 @@
 
 	<!-- Content
 	============================================= -->
-	<section id="content" style="padding: 30px; background: papayawhip;">
+	<section id="main-content" style="padding: 30px; background: papayawhip;">
 		
 		<div class="row">
 

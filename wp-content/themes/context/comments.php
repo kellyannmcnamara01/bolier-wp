@@ -8,7 +8,7 @@
 
 <!-- Comments
 ============================================= -->
-<section id="comments" style="background: coral; color: white; padding: 30px; font-size: 16px;">
+<section id="main-content" style="background: coral; color: white; padding: 30px; font-size: 16px;">
 
 	<h2>Comments</h2>
 

@@ -13,7 +13,7 @@
 
 	<!-- Content
 	============================================= -->
-	<section id="content" style="padding: 30px; background: lightpink;">
+	<section id="main-content" style="padding: 30px; background: lightpink;">
 		
 		<div class="row">
 

@@ -11,7 +11,7 @@
 
 	<!-- Content
 	============================================= -->
-	<section id="content" style="padding: 30px; background: pink;">
+	<section id="main-content" style="padding: 30px; background: pink;">
 		
 		<div class="row">
 

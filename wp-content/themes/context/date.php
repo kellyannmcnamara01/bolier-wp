@@ -10,7 +10,7 @@
 
     <!-- Content
     ============================================= -->
-    <section id="content" style="padding: 30px; background: lime;">
+    <section id="main-content" style="padding: 30px; background: lime;">
         
         <div class="row">
 

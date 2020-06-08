@@ -1,0 +1,11 @@
+/* Cookie Banner
+============================================= */
+.cookie-banner {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+
+	&.is-closed {
+		display: none;
+	}
+}

@@ -13,19 +13,17 @@
 
 		wp_enqueue_style( 'context_styles' );
 
-		?>
-
-		<!--[if lte IE 9]>
-			<?php wp_enqueue_style( 'context_ie_styles' ); ?>
-		<![endif]-->
-
-		<?php
+		/* IE Check <=9 */
+		/* source: https://stackoverflow.com/questions/5302302/php-if-internet-explorer-6-7-8-or-9 */
+		if (preg_match('/MSIE\s(?P<v>\d+)/i', @$_SERVER['HTTP_USER_AGENT'], $B) && $B['v'] <= 9) {
+			wp_enqueue_style( 'context_ie_styles' );
+		}
 		
 		
 
 		/* Scripts
 		============================================= */
-		wp_register_script( 'context_scripts', $uri . '/assets/dist/scripts/scripts.js', [], $ver, true );
+		wp_register_script( 'context_scripts', $uri . '/assets/dist/js/scripts.js', [], $ver, true );
 
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'context_scripts' );

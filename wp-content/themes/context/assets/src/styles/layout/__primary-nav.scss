@@ -2,4 +2,18 @@
 ============================================= */
 .primary-nav {
 
+	ul {
+		display: flex;
+
+		li {
+			padding: 0 1rem;
+
+			a {
+				&[aria-current='page'] {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+
 }

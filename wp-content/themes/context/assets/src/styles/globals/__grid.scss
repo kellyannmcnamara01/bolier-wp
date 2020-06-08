@@ -779,8 +779,8 @@
 }
 
 
-/* ============================================= */
-@include above-desktop-xlarge {
+/* above 1600 ============================================= */
+@include above-desktop-large {
 	[class*="col-xl"] {
 		box-sizing: border-box;
 		margin-left: $col-gutter-width;

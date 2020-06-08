@@ -1,7 +1,22 @@
 /* Top Bar
 ============================================= */
 .top-bar {
+	width: 100%;
+	position: fixed;
+	transition: 0.35s ease all;
+	padding: 1rem;
 
+	&.is-hiding {
+		transform: translateY(-100%);
+	}
+}
+
+
+/* Top Bar Page Padding Top
+============================================= */
+.top-bar__page-padding-top {
+	height: 137px;
+	width: 100%;
 }
 
 
@@ -10,12 +25,26 @@
 ============================================= */
 .top-bar__logo {
 
+	img {
+		max-width: 100px;
+		width: 100%;
+		height: auto;
+	}
 }
 
 
 
 /* Top Bar Search
 ============================================= */
+.top-bar__search-toggle {
+
+}
+
 .top-bar__search {
-	
+	transition: 0.35s ease all;
+	display: none;
+
+	&.is-showing {
+		display: block;
+	}
 }
