@@ -8,10 +8,7 @@
 
 
 jQuery(document).ready(function($) {
-
-
-
-
+	
 	/* Scroll Throttle
 	============================================= */
 	// * create and empty var
@@ -47,16 +44,13 @@ jQuery(document).ready(function($) {
 		if ($(window).scrollTop() >= topBarHeight) {
 			if (currentScroll > previousScroll){
 				// scrolling down
-				console.log('down');
 				$('.js--top-bar').addClass('is-hiding');
 			} else {
 				// scrolling up
-				console.log('up');
 				$('.js--top-bar').removeClass('is-hiding');
 			}
 		} else {
 			// at the top
-			console.log('top');
 			$('.js--top-bar').removeClass('is-hiding');
 		}
 

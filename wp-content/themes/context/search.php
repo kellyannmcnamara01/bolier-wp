@@ -45,6 +45,54 @@
     </section>
     <!-- Content [END] -->
 
+     <script>
+        /* Search Highlight
+        =============================================
+         * get searched text */
+        var searchedText = "<?php the_search_query(); ?>";
+        console.log('searchedText: ' + searchedText);
+
+        /* convert searched term to lowercase */
+        var lowercaseSearch = searchedText.toLowerCase();
+
+        /* create regex */
+        var searchRegex = new RegExp(lowercaseSearch, 'g');
+
+        function highlightSearchedTerm(element) {
+            jQuery(element).each(function(){
+                /* get inner text of title */
+                var inner = jQuery(this).html();
+
+                /* convert inner text to string */
+                var innerToString = inner.toString();
+
+                /* convert inner string to lowercase */
+                var innerStringLowercase = innerToString.toLowerCase();
+
+                /* match entered string to inner contents */
+                var matchStr =  innerStringLowercase.match(searchRegex);
+
+                /* if match found do things */
+                if (matchStr != null) {
+                    /* get index start location */
+                    var indexStart = innerStringLowercase.indexOf(lowercaseSearch);
+                    /* get index end location */
+                    var indexEnd = indexStart + lowercaseSearch.length;
+
+                    /* insert span with class highlight around searched word */
+                    var highlightOutput = inner.substring(0, indexStart) + "<span class='highlight'>" + inner.substring(indexStart, indexEnd) + "</span>" + inner.substring(indexEnd);
+                    jQuery(this).html(highlightOutput);
+                }
+            });
+        }
+
+        highlightSearchedTerm('.js--search__title');
+        highlightSearchedTerm('.post-card__title');
+        highlightSearchedTerm('.post-card__author');
+        highlightSearchedTerm('.post-card__categories');
+        highlightSearchedTerm('.post-card p');
+        /* Search Highlight [END] */
+    </script>
 
 <!-- Footer
 ============================================= -->

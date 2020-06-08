@@ -19,3 +19,7 @@ Part of Context's accessibility standards is to insure we have a working *Skip t
 - The grid scss file is already set up to work so do not edit it unless necessary
 - Duplicate the mixins, typography and variables from /src/styles/globals to src/ie-styles/globals
 - Make the apportiate adjustments within the correct scss files/folders 
+
+
+## Search Highlight
+At the bottom of the search php page you will find a script. *It is required to be there due to the direct php we are echoing into the js.* At the very bottom of it you will see that the `highlightSearchedTerm()` is being called and passing through the elements that the function needs to look through. I have it set particularly like that so the page doesn't crash go through every element on it. Update the elements to adjust to your theme's html markup.

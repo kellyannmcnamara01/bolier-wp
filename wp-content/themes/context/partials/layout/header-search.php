@@ -2,7 +2,7 @@
 
 	<!-- Title
     ============================================= -->
-	<h1><?php _e( 'Search results for:', 'context' ); the_search_query(); ?></h1>
+	<h1 class="search__title js--search__title"><?php _e( 'Search results for:', 'context' ); the_search_query(); ?></h1>
 
 	<!-- Search Form
     ============================================= -->
