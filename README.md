@@ -2,7 +2,7 @@
 
 ## Built-In Functions
 - `e-reader-only` class 
-  - *(see [#e-readers-text](#e-readers-text))*
+	- *(see [#e-readers-text](#e-readers-text))*
 - skip to main content btn *(see [#skip-to-main-content-btn](#skip-to-main-content-btn))*
 - IE-friendly grid *(see [#ensuring-ie-styling](#ensuring-ie-styling))*
 - search highlight *(see [#search-highlight](#search-highlight))*
