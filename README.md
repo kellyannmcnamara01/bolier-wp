@@ -1,5 +1,9 @@
 # Boiler WP
 
+
+---
+
+
 ## Index
 - [Built-In Functions](#built-in-functions)
 - [JS Actions](#js-actions)
@@ -15,6 +19,8 @@
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
 
+
+---
 
 
 ## Built-In Functions
@@ -34,11 +40,15 @@
 - accessible cards
 
 
+---
+
 
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
 - Elements that are targeted by js should have a duplicated class name with the addtiona of `js--` in front. An example of that is `clas-name js--class-name`, this way the scss will not get cluttered with the addtional `js--` and it is easier for a dev to see what elements within the html are targeted by js. This being said if there is a popup and a popup button, you only need to add the addtional `js--` to the button, which is the trigger. 
 
+
+---
 
 
 ## Accessibility
@@ -55,15 +65,18 @@ Accessible card (or block links) have been placed in the `partials/posts/content
 2. A single link within the container
 
 The card container should have:
-- [ ] an id; example: `id="post-<?php the_ID(); ?>"`
-- [ ] the classes `accessible-card js--accessible-card`
+- an id; example: `id="post-<?php the_ID(); ?>"`
+- the classes `accessible-card js--accessible-card`
 
 The single link within the container should have:
-- [ ] the attr `accessible-card-link` set to match the card container's id; example `accessible-card-link="post-<?php the_ID(); ?>"`
-- [ ] the classes `accessible-card__link js--accessible-card__link`
+- the attr `accessible-card-link` set to match the card container's id; example `accessible-card-link="post-<?php the_ID(); ?>"`
+- the classes `accessible-card__link js--accessible-card__link`
 
 You do not need to add additional aria tags or other attrs to the card container or the card. 
 Again, it's **important** not to use the accessible card classes as style elements, but rather only when an element should be a block link.
+
+
+---
 
 
 ## Ensuring IE Styling
@@ -72,6 +85,8 @@ Again, it's **important** not to use the accessible card classes as style elemen
 - Duplicate the mixins, typography and variables from /src/styles/globals to src/ie-styles/globals
 - Make the apportiate adjustments within the correct scss files/folders 
 
+
+---
 
 
 ## The Customizer
@@ -87,10 +102,14 @@ This allows you to currently edit the social media links in `customizing -> cont
 Within the customizer a client can toggle the back to top btn on or off within `customizing -> context custom panel -> miscellaneous settings`. If you wish to edit this in the code by removing this option you can do by editing `includes/customizer/misc.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `partials/reusables/back-top-top.php` file
 
 
+---
+
 
 ## Cookies
 Within `assets/scr/scripts/partials/cookies.js` you will find reusable functions to creating cookies. Use the `getCookie()` and the `acceptCookie()` functions to create cookies for anything you need. **Note:** if you use cookies you much include a banner saying so, along with a privacy policy page. This page is typically created by the client's legal team and should be pointed out as a task for the client early in the project. 
 
+
+---
 
 
 ## Search Highlight
