@@ -1,8 +1,19 @@
 # Boiler WP
 
+## Index
+- [Built-In Functions](#built-in-functions)
+- [JS Actions](#js-actions)
+- [Accessibility](#accessibility)
+	- [E-readers text](#e-readers-text)
+	- [Skip to main content btn](#skip-to-main-content-btn)
+- [Ensuring IE Styling](#ensuring-ie-styling)
+- [The Customizer](#the-customizer)
+- [Cookies](#cookies)
+- [Search Highlight](#search-highlight)
+
+
 ## Built-In Functions
-- `e-reader-only` class 
-	- *(see [#e-readers-text](#e-readers-text))*
+- `e-reader-only` class *(see [#e-readers-text](#e-readers-text))*
 - skip to main content btn *(see [#skip-to-main-content-btn](#skip-to-main-content-btn))*
 - IE-friendly grid *(see [#ensuring-ie-styling](#ensuring-ie-styling))*
 - search highlight *(see [#search-highlight](#search-highlight))*
