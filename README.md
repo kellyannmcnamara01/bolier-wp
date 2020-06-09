@@ -2,13 +2,13 @@
 
 ## Built-In Functions
 - `e-reader-only` class *(see [#e-readers-text](#e-readers-text))*
-- skip to main content btn *(see #skip-to-main-content-btn)*
-- IE-friendly grid *(see #ensuring-ie-styling)*
-- search highlight *(see #search-highlight)*
+- skip to main content btn *(see [#skip-to-main-content-btn](#skip-to-main-content-btn))*
+- IE-friendly grid *(see [#ensuring-ie-styling](#ensuring-ie-styling))*
+- search highlight *(see [#search-highlight](#search-highlight))*
 - top bar search toggles with btn
 - top bar hides on scroll down, shows on scroll up
-- cookies function + cookie banner *(see #cookies)*
-- custom theme options in the customizer *(see #the-customizer)*
+- cookies function + cookie banner *(see [#cookies](#cookies))*
+- custom theme options in the customizer *(see [#the-customizer](#the-customizer))*
 
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
