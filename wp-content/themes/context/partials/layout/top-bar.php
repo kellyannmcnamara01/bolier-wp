@@ -23,7 +23,18 @@
 			<!-- Primary Nav
 		    ============================================= -->
 		    <div class="col-xs-6">
-				<?php get_template_part( 'partials/layout/primary-nav' ); ?>
+		    	<div class="in-mobile">
+		    		<button tabindex="0" class="top-bar__hamham js--top-bar__hamham" id="hamham">
+		    			<span><span class="e-reader-only">Open/close menu</span></span>
+		    			<span></span>
+		    			<span></span>
+		    			<span></span>
+		    		</button>
+		    		<label for="hamham" class="top-bar__hamham-label">Menu</label>
+		    	</div>
+		    	<div class="in-desktop">
+					<?php get_template_part( 'partials/layout/primary-nav' ); ?>
+				</div>
 			</div>
 
 
@@ -68,3 +79,9 @@
 </div>
 
 <div class="top-bar__page-padding-top"></div>
+
+<div class="in-mobile">
+	<div class="top-bar__mobile-menu js--top-bar__mobile-menu">
+		<?php get_template_part( 'partials/layout/primary-nav' ); ?>
+	</div>
+</div>

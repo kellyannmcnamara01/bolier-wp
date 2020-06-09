@@ -19,8 +19,11 @@
 - search highlight *(see [#search-highlight](#search-highlight))*
 - top bar search toggles with btn
 - top bar hides on scroll down, shows on scroll up
+- mobile navigation with base styled hamham trigger
 - cookies function + cookie banner *(see [#cookies](#cookies))*
 - custom theme options in the customizer *(see [#the-customizer](#the-customizer))*
+- accordion js functionality (not wp enabled)
+- back to top btn 
 
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state

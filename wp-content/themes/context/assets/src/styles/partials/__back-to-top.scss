@@ -1,0 +1,55 @@
+/* Back to Top
+============================================= */
+.back-to-top {
+	display: none;
+	background: none;
+	border: none;
+	box-shadow: none;
+	background: yellow;
+	padding: 1rem;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+
+	&.is-showing {
+		display: block;
+	}
+
+	>span {
+		display: block;
+		position: relative;
+		width: 2rem;
+		height: 2rem;
+
+		>span {
+			display: block;
+			background: blue;
+			position: absolute;
+
+			&:first-child {
+				height: 100%;
+				width: 3px;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+
+			&:nth-child(2) {
+				height: 3px;
+				width: 61%;
+				top: 2px;
+				left: 0;
+				transform: translateY(100%) rotate(-45deg);
+			}
+
+			&:last-child {
+				height: 3px;
+				width: 61%;
+				top: 2px;
+				right: 0;
+				transform: translateY(100%) rotate(45deg);
+			}
+		}
+	}
+}

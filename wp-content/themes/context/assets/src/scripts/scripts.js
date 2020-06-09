@@ -4,6 +4,8 @@
  * On Page Scroll
  * Navigation
  * Top Bar Search
+ * Back to Top
+ * Accordion
 ============================================= */
 
 
@@ -42,6 +44,9 @@ jQuery(document).ready(function($) {
 		var currentScroll = $(this).scrollTop();
 
 		if ($(window).scrollTop() >= topBarHeight) {
+
+			$('.js--back-to-top').addClass('is-showing');
+
 			if (currentScroll > previousScroll){
 				// scrolling down
 				$('.js--top-bar').addClass('is-hiding');
@@ -49,8 +54,11 @@ jQuery(document).ready(function($) {
 				// scrolling up
 				$('.js--top-bar').removeClass('is-hiding');
 			}
+
+
 		} else {
 			// at the top
+			$('.js--back-to-top').removeClass('is-showing');
 			$('.js--top-bar').removeClass('is-hiding');
 		}
 
@@ -65,7 +73,11 @@ jQuery(document).ready(function($) {
 
 	/* Navigation
 	============================================= */
-
+	$('.js--top-bar__hamham').click(function(){
+		$(this).toggleClass('is-open');
+		$('.js--top-bar__mobile-menu').toggleClass('is-showing');
+		$('body').toggleClass('is-locked');
+	});
 	/* Navigation [END] */
 
 
@@ -77,6 +89,48 @@ jQuery(document).ready(function($) {
 		$('.top-bar__search').toggleClass('is-showing');
 	});
 	/* Top Bar Search [END] */
+
+
+
+
+	/* Back to Top
+	============================================= */
+	$('.js--back-to-top').click(function(){
+		$('body,html').animate({
+            scrollTop: 0
+        }, 350);
+	});
+	/* Back to Top [END] */
+
+
+
+
+	/* Accordion
+	============================================= */
+	$('.js--accordion__trigger').click(function(){
+		var currentState = $(this).attr('aria-expanded'),
+			ariaControls = $(this).attr('aria-controls'),
+			panel = $('.accordion__panel[id="' + ariaControls + '"]');
+
+		if( currentState == 'false' ){
+			$(this).addClass('is-open');
+			$(this).attr('aria-expanded', 'true');
+
+			panel.addClass('is-open');
+			panel.removeAttr('hidden');
+			panel.attr('aria-hidden', 'false');
+			panel.attr('focusable', 'true');
+		} else {
+			$(this).removeClass('is-open');
+			$(this).attr('aria-expanded', 'false');
+
+			panel.removeClass('is-open');
+			panel.attr('hidden', 'hidden');
+			panel.attr('aria-hidden', 'true');
+			panel.attr('focusable', 'false');
+		}
+	});
+	/* Accordion [END] */
 
 
 

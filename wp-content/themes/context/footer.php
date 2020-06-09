@@ -67,6 +67,21 @@
             </footer>
             <!-- Footer [END] -->
 
+
+
+            <!-- Back to Top Btn
+            ============================================= -->
+            <button class="back-to-top js--back-to-top">
+                <span>
+                    <span><span class="e-reader-only">back to top of page</span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+            </button>
+            <!-- Back to Top Btn [END] -->
+
+
+
         <!-- External JavaScripts
         ============================================= -->
         <?php wp_footer(); ?>

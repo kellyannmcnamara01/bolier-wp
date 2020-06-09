@@ -48,3 +48,112 @@
 		display: block;
 	}
 }
+
+
+
+/* Top Bar HamHam
+============================================= */
+.top-bar__hamham {
+	width: 2rem;
+	height: 1.3rem;
+	position: relative;
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+
+	>span {
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: yellow;
+		overflow: hidden;
+		position: absolute;
+		transform: translateY(-50%);
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: blue;
+			transition: 0.5s ease all;
+			transform: translateX(-100%);
+		}
+
+		&:first-child {
+			top: 0;
+			left: 0;
+			transition: 0.15s ease all;
+		}
+
+		&:nth-child(2), &:nth-child(3) {
+			top: 50%;
+			left: 0;
+			transition: 0.5s ease all;
+
+			&::after {
+				transition-delay: 0.1s;
+			}
+		}
+
+		&:last-child {
+			top: 100%;
+			left: 0;
+			transition: 0.15s ease all;
+
+			&::after {
+				transition-delay: 0.2s;
+			}
+		}
+	}
+
+	&:hover, &:focus {
+
+		outline: none;
+
+		>span::after {
+			transform: translateX(100%);
+		}
+
+	}
+
+	&.is-open {
+
+		>span {
+			&:first-child, &:last-child {
+				top: 50%;
+				opacity: 0;
+			}
+
+			&:nth-child(2) {
+				transform: translateY(-50%) rotate(45deg);
+			}
+
+			&:nth-child(3) {
+				transform: translateY(-50%) rotate(-45deg);
+			}
+		}
+	}
+}
+
+
+
+/* Top Bar Mobile Menu
+============================================= */
+.top-bar__mobile-menu {
+	transition: 0.35s ease all;
+	display: none;
+
+	&.is-showing {
+		display: block;
+	}
+}
+
+
+
+
+
+
+
+
