@@ -58,7 +58,7 @@ The global class `e-reader-only` will visually hide anything it is attached to b
 
 #### E-readers Text Example
 
-```
+```html
 <span class="e-reader-only">Only e-readers can see this copy</span>
 ```
 
@@ -67,7 +67,7 @@ Part of Context's accessibility standards is to insure we have a working *Skip t
 
 #### Skip to Main Content Btn Example
 
-```
+```html
 <a class="e-reader-only" href="#main-content">Skip to main content</a>
 ```
 
@@ -89,7 +89,7 @@ Again, it's **important** not to use the accessible card classes as style elemen
 
 #### Accessible Card Example
 
-```
+```html
 <li id="post-<?php the_ID(); ?>"  <?php post_class( 'post-card accessible-card js--accessible-card' ); ?> >
 	<h1>Title Placement<h1>
 	<p>Copy Placement...</p>
