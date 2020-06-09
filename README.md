@@ -5,28 +5,32 @@
 - [JS Actions](#js-actions)
 - [Accessibility](#accessibility)
 	- [E-readers text](#e-readers-text)
-	- [Skip to main content btn](#skip-to-main-content-btn)
-	- [Back to top btn](#back-to-top-btn-customization)
+	- [Skip to Main Content Btn](#skip-to-main-content-btn)
+	- [Accessible Cards](#accessible-cards)
 - [Ensuring IE Styling](#ensuring-ie-styling)
 - [The Customizer](#the-customizer)
+	- [Footer Lgeal Customization ](#footer-lgeal-customization)
+	- [Social Links Customization](#social-links-customization)
+	- [Back to Top Btn](#back-to-top-btn-customization)
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
 
 
 ## Built-In Functions
-- `e-reader-only` class *(see [#e-readers-text](#e-readers-text))*
-- skip to main content btn *(see [#skip-to-main-content-btn](#skip-to-main-content-btn))*
-- IE-friendly grid *(see [#ensuring-ie-styling](#ensuring-ie-styling))*
-- search highlight *(see [#search-highlight](#search-highlight))*
+- `e-reader-only` class
+- skip to main content btn
+- IE-friendly grid
+- search highlight
 - top bar search toggles with btn
 - top bar hides on scroll down, shows on scroll up
 - mobile navigation with base styled hamham trigger
-- cookies function + cookie banner *(see [#cookies](#cookies))*
-- custom theme options in the customizer *(see [#the-customizer](#the-customizer))*
-- custom footer options in the customerizer *(see [#footer-lgeal-customization](#footer-lgeal-customization))*
-- custom social options in the customerizer *(see [#social-links-customization](#social-links-customization))*
-- back to top btn w/ customerizer toogle *(see [#back-to-top-btn-customization](#back-to-top-btn-customization))*
+- cookies function + cookie banner
+- custom theme options in the customizer
+- custom footer options in the customerizer
+- custom social options in the customerizer
+- back to top btn w/ customerizer toogle
 - accordion js functionality (not wp enabled)
+- accessible cards
 
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
@@ -35,11 +39,13 @@
 
 ## Accessibility
 
-### E-readers text
+### E-readers Text
 The global class `e-reader-only` will visually hide anything it is attached to but still allows an e-reader to get the content in order of the html. Best used on `div` or `span` tags
 
-### Skip to main content btn
+### Skip to Main Content Btn
 Part of Context's accessibility standards is to insure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is citical that this is working on every template. 
+
+### Accessible Cards
 
 
 ## Ensuring IE Styling
@@ -49,13 +55,13 @@ Part of Context's accessibility standards is to insure we have a working *Skip t
 - Make the apportiate adjustments within the correct scss files/folders 
 
 
-## The customizer
+## The Customizer
 Currently built into the customer are the following items:
 
-### Footer lgeal customization 
+### Footer Lgeal Customization 
 This allows you to currently edit the privacy policy page, terms of conditions and the copyright statment. In the theme's customizer you can edit this under: `customizing -> context custom panel -> footer settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/footer.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `footer.php` file
 
-### Social links customization
+### Social Links Customization
 This allows you to currently edit the social media links in `customizing -> context custom panel -> social settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/social.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `partials/reusables/social-links.php` file
 
 ### Back to top btn customization

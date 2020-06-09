@@ -6,6 +6,7 @@
  * Top Bar Search
  * Back to Top
  * Accordion
+ * Accessible Cards
 ============================================= */
 
 
@@ -131,6 +132,41 @@ jQuery(document).ready(function($) {
 		}
 	});
 	/* Accordion [END] */
+
+
+
+
+	/* Accessible Cards
+	============================================= */
+	$('.js--accessible-card').click(function(){
+
+		var cardId = $(this).attr('id'),
+			accessibleCardLink = $('.accessible-card__link[accessible-card-link="' + cardId + '"]'),
+			accessibleCardLocation = accessibleCardLink.attr('href'),
+			isTextSelected = window.getSelection().toString();
+
+		if ( !isTextSelected ){
+			location.href = accessibleCardLocation;
+		}
+	});
+
+	$('.js--accessible-card__link').focus(function(){
+
+		var cardId = $(this).attr('accessible-card-link'),
+			accessibleCard = $('.accessible-card[id="' + cardId + '"]');
+
+		accessibleCard.addClass('is-focused');
+	});
+
+	$('.js--accessible-card__link').focusout(function(){
+
+		var cardId = $(this).attr('accessible-card-link'),
+			accessibleCard = $('.accessible-card[id="' + cardId + '"]');
+
+		accessibleCard.removeClass('is-focused');
+	});
+	/* Accessible Cards [END] */
+
 
 
 
