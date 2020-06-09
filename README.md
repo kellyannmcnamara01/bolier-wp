@@ -1,14 +1,14 @@
 # Boiler WP
 
 ## Built-In Functions
-- `e-reader-only` class
-- skip to main content btn
-- IE-friendly grid
-- search highlight
+- `e-reader-only` class *(see [#e-readers-text](#e-readers-text))*
+- skip to main content btn *(see #skip-to-main-content-btn)*
+- IE-friendly grid *(see #ensuring-ie-styling)*
+- search highlight *(see #search-highlight)*
 - top bar search toggles with btn
 - top bar hides on scroll down, shows on scroll up
-- cookies function + cookie banner
-- custom theme options in the customizer
+- cookies function + cookie banner *(see #cookies)*
+- custom theme options in the customizer *(see #the-customizer)*
 
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
@@ -31,7 +31,7 @@ Part of Context's accessibility standards is to insure we have a working *Skip t
 - Make the apportiate adjustments within the correct scss files/folders 
 
 
-## The Customerizer
+## The Customizer
 Currently built into the customer are the following items:
 - **Footer lgeal customization**: This allows you to currently edit the privacy policy page, terms of conditions and the copyright statment. In the theme's customizer you can edit this under: `customizing -> context custom panel -> miscellaneous settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/misc.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `footer.php` file
 - **Social links customization**: This allows you to currently edit the social media links in `customizing -> context custom panel -> social settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/social.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `partials/reusables/social-links.php` file
