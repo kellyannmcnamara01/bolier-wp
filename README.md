@@ -55,12 +55,12 @@ Accessible card (or block links) have been placed in the `partials/posts/content
 2. A single link within the container
 
 The card container should have:
-- an id; example: `id="post-<?php the_ID(); ?>"`
-- the classes `accessible-card js--accessible-card`
+- [ ] an id; example: `id="post-<?php the_ID(); ?>"`
+- [ ] the classes `accessible-card js--accessible-card`
 
 The single link within the container should have:
-- the attr `accessible-card-link` set to match the card container's id; example `accessible-card-link="post-<?php the_ID(); ?>"`
-- the classes `accessible-card__link js--accessible-card__link`
+- [ ] the attr `accessible-card-link` set to match the card container's id; example `accessible-card-link="post-<?php the_ID(); ?>"`
+- [ ] the classes `accessible-card__link js--accessible-card__link`
 
 You do not need to add additional aria tags or other attrs to the card container or the card. 
 Again, it's **important** not to use the accessible card classes as style elements, but rather only when an element should be a block link.
