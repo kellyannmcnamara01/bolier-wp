@@ -16,6 +16,7 @@
 - [Search Highlight](#search-highlight)
 
 
+
 ## Built-In Functions
 - `e-reader-only` class
 - skip to main content btn
@@ -32,9 +33,12 @@
 - accordion js functionality (not wp enabled)
 - accessible cards
 
+
+
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
 - Elements that are targeted by js should have a duplicated class name with the addtiona of `js--` in front. An example of that is `clas-name js--class-name`, this way the scss will not get cluttered with the addtional `js--` and it is easier for a dev to see what elements within the html are targeted by js. This being said if there is a popup and a popup button, you only need to add the addtional `js--` to the button, which is the trigger. 
+
 
 
 ## Accessibility
@@ -46,6 +50,20 @@ The global class `e-reader-only` will visually hide anything it is attached to b
 Part of Context's accessibility standards is to insure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is citical that this is working on every template. 
 
 ### Accessible Cards
+Accessible card (or block links) have been placed in the `partials/posts/content-excerpt.php` file as well as in the `assets/src/scripts/scripts.js` file. Accessible cards also have it's own scss file withing `assets/src/styles/partials/__accessible-cards.scss`. This scss file is **not for styling individual** card types. Individual card types should live in files such as `__post-card.scss`. To make a card accessible there are two html elements that are required:
+1. The card container
+2. A single link within the container
+
+The card container should have:
+- an id; example: `id="post-<?php the_ID(); ?>"`
+- the classes `accessible-card js--accessible-card`
+
+The single link within the container should have:
+- the attr `accessible-card-link` set to match the card container's id; example `accessible-card-link="post-<?php the_ID(); ?>"`
+- the classes `accessible-card__link js--accessible-card__link`
+
+You do not need to add additional aria tags or other attrs to the card container or the card. 
+Again, it's **important** not to use the accessible card classes as style elements, but rather only when an element should be a block link.
 
 
 ## Ensuring IE Styling
@@ -53,6 +71,7 @@ Part of Context's accessibility standards is to insure we have a working *Skip t
 - The grid scss file is already set up to work so do not edit it unless necessary
 - Duplicate the mixins, typography and variables from /src/styles/globals to src/ie-styles/globals
 - Make the apportiate adjustments within the correct scss files/folders 
+
 
 
 ## The Customizer
@@ -69,9 +88,9 @@ Within the customizer a client can toggle the back to top btn on or off within `
 
 
 
-
 ## Cookies
 Within `assets/scr/scripts/partials/cookies.js` you will find reusable functions to creating cookies. Use the `getCookie()` and the `acceptCookie()` functions to create cookies for anything you need. **Note:** if you use cookies you much include a banner saying so, along with a privacy policy page. This page is typically created by the client's legal team and should be pointed out as a task for the client early in the project. 
+
 
 
 ## Search Highlight
