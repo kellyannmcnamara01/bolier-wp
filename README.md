@@ -6,6 +6,7 @@
 - [Accessibility](#accessibility)
 	- [E-readers text](#e-readers-text)
 	- [Skip to main content btn](#skip-to-main-content-btn)
+	- [Back to top btn](#back-to-top-btn-customization)
 - [Ensuring IE Styling](#ensuring-ie-styling)
 - [The Customizer](#the-customizer)
 - [Cookies](#cookies)
@@ -22,8 +23,10 @@
 - mobile navigation with base styled hamham trigger
 - cookies function + cookie banner *(see [#cookies](#cookies))*
 - custom theme options in the customizer *(see [#the-customizer](#the-customizer))*
+- custom footer options in the customerizer *(see [#footer-lgeal-customization](#footer-lgeal-customization))*
+- custom social options in the customerizer *(see [#social-links-customization](#social-links-customization))*
+- back to top btn w/ customerizer toogle *(see [#back-to-top-btn-customization](#back-to-top-btn-customization))*
 - accordion js functionality (not wp enabled)
-- back to top btn 
 
 ## JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
