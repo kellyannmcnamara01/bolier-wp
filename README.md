@@ -56,8 +56,20 @@
 ### E-readers Text
 The global class `e-reader-only` will visually hide anything it is attached to but still allows an e-reader to get the content in order of the html. Best used on `div` or `span` tags
 
+#### E-readers Text Example
+
+```
+<span class="e-reader-only">Only e-readers can see this copy</span>
+```
+
 ### Skip to Main Content Btn
 Part of Context's accessibility standards is to insure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is citical that this is working on every template. 
+
+#### Skip to Main Content Btn Example
+
+```
+<a class="e-reader-only" href="#main-content">Skip to main content</a>
+```
 
 ### Accessible Cards
 Accessible card (or block links) have been placed in the `partials/posts/content-excerpt.php` file as well as in the `assets/src/scripts/scripts.js` file. Accessible cards also have it's own scss file withing `assets/src/styles/partials/__accessible-cards.scss`. This scss file is **not for styling individual** card types. Individual card types should live in files such as `__post-card.scss`. To make a card accessible there are two html elements that are required:
