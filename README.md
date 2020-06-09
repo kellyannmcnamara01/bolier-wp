@@ -75,6 +75,16 @@ The single link within the container should have:
 You do not need to add additional aria tags or other attrs to the card container or the card. 
 Again, it's **important** not to use the accessible card classes as style elements, but rather only when an element should be a block link.
 
+#### Accessible Card Example
+
+```
+<li id="post-<?php the_ID(); ?>"  <?php post_class( 'post-card accessible-card js--accessible-card' ); ?> >
+	<h1>Title Placement<h1>
+	<p>Copy Placement...</p>
+	<a href="<?php the_permalink(); ?>" class="post-card__link accessible-card__link js--accessible-card__link" accessible-card-link="post-<?php the_ID(); ?>">Link</a>
+</li>
+```
+
 
 ---
 
