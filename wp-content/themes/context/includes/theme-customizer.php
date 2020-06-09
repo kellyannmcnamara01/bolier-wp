@@ -25,6 +25,7 @@
         ============================================= */
 		context_social_customizer_section( $wp_customize );
 		context_misc_customizer_section( $wp_customize );
+		context_footer_customizer_section( $wp_customize );
 	}
 
 ?>

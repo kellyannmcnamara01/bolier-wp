@@ -57,6 +57,7 @@
 			// theme_mods: set up menus for each of the registered areas in the theme
 			'theme_mods'			=> [
 				'context_header_show_search'	=> 'yes',
+				'content_show_top_btn'			=> 'yes',
 				'context_footer_copyright'		=> 'Copyright &copy;',
 				'context_fb'					=> 'https://www.facebook.com/',
 				'context_ig'					=> 'https://www.instagram.com/',
