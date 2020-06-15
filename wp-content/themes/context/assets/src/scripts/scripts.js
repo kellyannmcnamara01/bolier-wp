@@ -84,6 +84,17 @@ jQuery(document).ready(function($) {
 
 
 
+	/* Navigation: Levels
+	============================================= */
+	$('.primary-nav .menu-item').hover(function(){
+		$(this).toggleClass('is-open');
+		$(this).find('> .sub-menu').slideToggle();
+	});
+	/* Navigation: Levels [END] */
+
+
+
+
 	/* Top Bar Search
 	============================================= */
 	$('.js--top-bar__search-toggle').click(function(){
