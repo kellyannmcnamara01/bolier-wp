@@ -16,6 +16,7 @@
 	- [Footer Lgeal Customization ](#footer-lgeal-customization)
 	- [Social Links Customization](#social-links-customization)
 	- [Back to Top Btn](#back-to-top-btn-customization)
+- [Smooth Scroll](#smooth-scroll)
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
 
@@ -38,6 +39,8 @@
 - back to top btn w/ customerizer toogle
 - accordion js functionality (not wp enabled)
 - accessible cards
+- smooth scroll
+- page navigation
 
 
 ---
@@ -122,6 +125,19 @@ This allows you to currently edit the social media links in `customizing -> cont
 
 ### Back to top btn customization
 Within the customizer a client can toggle the back to top btn on or off within `customizing -> context custom panel -> miscellaneous settings`. If you wish to edit this in the code by removing this option you can do by editing `includes/customizer/misc.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `partials/reusables/back-top-top.php` file
+
+
+---
+
+
+## Smooth Scroll
+To activate smooth scroll you need a button/link and an element with an id. 
+```
+<button scroll="placement-id">Scroll to placement id</button>
+<h1 id="placement-id">Placement ID Title</h1>
+```
+
+*Note: You can use this for the page navigation: `partials/reusables/nav-page.php`*
 
 
 ---

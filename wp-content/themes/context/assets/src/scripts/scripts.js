@@ -2,7 +2,6 @@
 =============================================
  * Scroll Throttle
  * On Page Scroll
- * Navigation
  * Top Bar Search
  * Back to Top
  * Accordion
@@ -72,29 +71,6 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Navigation
-	============================================= */
-	$('.js--top-bar__hamham').click(function(){
-		$(this).toggleClass('is-open');
-		$('.js--top-bar__mobile-menu').toggleClass('is-showing');
-		$('body').toggleClass('is-locked');
-	});
-	/* Navigation [END] */
-
-
-
-
-	/* Navigation: Levels
-	============================================= */
-	$('.primary-nav .menu-item').hover(function(){
-		$(this).toggleClass('is-open');
-		$(this).find('> .sub-menu').slideToggle();
-	});
-	/* Navigation: Levels [END] */
-
-
-
-
 	/* Top Bar Search
 	============================================= */
 	$('.js--top-bar__search-toggle').click(function(){
@@ -107,10 +83,21 @@ jQuery(document).ready(function($) {
 
 	/* Back to Top
 	============================================= */
-	$('.js--back-to-top').click(function(){
+	$('.js--back-to-top').click(function(e){
+		e.preventDefault();
+		
 		$('body,html').animate({
             scrollTop: 0
         }, 350);
+
+		//accessibility for tabbing
+        $(this).removeAttr('tabindex');
+	    $('body,html').prop('tabindex', '0');
+	    $('body,html').focus();
+
+	    setTimeout(function(){
+			$('body,html').removeAttr('tabindex');
+		}, 1000);
 	});
 	/* Back to Top [END] */
 
@@ -177,6 +164,30 @@ jQuery(document).ready(function($) {
 		accessibleCard.removeClass('is-focused');
 	});
 	/* Accessible Cards [END] */
+
+
+
+
+	/* Smooth Scroll
+	============================================= */
+	$('[scroll]').click(function(e){
+		e.preventDefault();
+		var scrollTo = $(this).attr('scroll');
+
+		$('html, body').animate({
+	        scrollTop: $('#' + scrollTo).offset().top
+	    }, 500);
+
+		//accessibility for tabbing
+	    $(this).removeAttr('tabindex');
+	    $('[id="' + scrollTo  + '"]').prop('tabindex', '0');
+	    $('[id="' + scrollTo  + '"]').focus();
+
+	    setTimeout(function(){
+			$('[id="' + scrollTo  + '"]').removeAttr('tabindex');
+		}, 1000);
+	});
+	/* Smooth Scroll [END] */
 
 
 

@@ -69,6 +69,7 @@ gulp.task('iesass', function(){
 gulp.task('js', function(){
     return gulp.src([
             'assets/src/scripts/partials/cookies.js',
+            'assets/src/scripts/partials/navigation.js',
             'assets/src/scripts/scripts.js'
         ])
         .pipe(concat('scripts.js'))
