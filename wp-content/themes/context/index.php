@@ -28,6 +28,11 @@
                 <?php /* get_template_part( 'partials/reusables/posts', 'popular' ); */ ?>
 
 
+                <!-- Tool Tip
+                ============================================= -->
+                <?php get_template_part( 'partials/reusables/tooltip' ); ?>
+
+
                 <!-- Posts
                 ============================================= -->
                 <?php get_template_part( 'partials/reusables/posts' ); ?>
