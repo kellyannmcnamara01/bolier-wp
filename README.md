@@ -18,6 +18,7 @@
 	- [Back to Top Btn](#back-to-top-btn-customization)
 - [Accordions](#accordions)
 - [Tooltips](#tooltips)
+- [Footnotes](#footnotes)
 - [Smooth Scroll](#smooth-scroll)
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
@@ -44,6 +45,7 @@
 - smooth scroll
 - page navigation
 - tooltips
+- footnotes
 
 
 ---
@@ -159,7 +161,7 @@ Here is an example of the accordion html markup
 
 
 ## Tooltips
-Tooltips can either be buttons or inline text. The reusable is file is set up in `partials/reusables/tooltip.php`.
+Tooltips can either be buttons or inline text. The reusable is file is set up in `partials/reusables/tooltip.php`. This is currently not set up to hook into WP's admin area.
 
 It is important that each tooltip has the following attrs set as unique strings:
 - the trigger should have a unique id
@@ -167,7 +169,7 @@ It is important that each tooltip has the following attrs set as unique strings:
 - the trigger's aria-controls should match the pannel's id
 - the pannel's aria-labelledby should match the trigger's id
 
-Here is an example of the tooltip button (default file):
+Here is an example of the tooltip button:
 ```html
 <span class="tooltip" style="background: khaki;">
 	<button id="tooltip-2-btn" class="tooltip__trigger tooltip__trigger--btn js--tooltip__trigger" aria-expanded="false" aria-controls="tooltip-id-2">Tooltip Btn</button>
@@ -176,6 +178,31 @@ Here is an example of the tooltip button (default file):
 ```
 
 To convert a tooltip to be inline, simply swap the class `tooltip__trigger--btn` for `tooltip__trigger--inline`
+
+
+---
+
+
+## Footnotes
+Footnotes a set up in a reusable located `partials/reusables/footnote.php`. This is currently not set up to hook into WP's admin area.
+
+It is important that each footnote has the following attrs set as unique strings:
+- the trigger should have a unique id
+- the pannel should have a unique id
+- the trigger's aria-controls should match the pannel's id
+- the pannel's aria-labelledby should match the trigger's id
+
+Here is an example of a footnote:
+```html
+<div class="footnote" style="padding: 30px; font-size: 16px; background: thistle;">
+    <button id="footnote-1-btn" class="footnote__trigger js--footnote__trigger" aria-expanded="false" aria-controls="footnote-id-1">Footnote One
+        <span class="e-reader-only">Open footnote</span>
+    </button>
+    <div id="footnote-id-1" class="footnote__panel" role="region" aria-labelledby="footnote-1-btn" hidden="true" aria-hidden="true" focusable="false">
+        <p>Footnote One: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lectus est.</p>
+    </div>
+</div>
+```
 
 
 ---
