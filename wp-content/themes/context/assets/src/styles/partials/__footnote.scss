@@ -16,5 +16,75 @@
 	transform: translate(-50%, -50%);
 	background: thistle;
 	z-index: 2;
-	
+	align-items: flex-start;
+
+	&.is-open {
+		display: flex;
+	}
+
+	>div {
+		width: calc(100% - 2rem);
+	}
+
+}
+
+
+.footnote__close-btn {
+
+	width: 2rem;
+	height: 1.3rem;
+	position: relative;
+	background: none;
+	border: none;
+	box-shadow: none;
+	padding: 0;
+
+	>span {
+		display: block;
+		width: 100%;
+		height: 3px;
+		background: darken(thistle, 20%);
+		overflow: hidden;
+		position: absolute;
+		transform: translateY(-50%);
+
+		&::after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: lighten(thistle, 15%);;
+			transition: 0.5s ease all;
+			transform: translateX(-100%);
+		}
+
+		&:first-child {
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%) rotate(45deg);
+			transition: 0.15s ease all;
+		}
+
+		&:last-child {
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%) rotate(-45deg);
+			transition: 0.15s ease all;
+
+			&::after {
+				transition-delay: 0.2s;
+			}
+		}
+	}
+
+	&:hover, &:focus {
+
+		outline: none;
+
+		>span::after {
+			transform: translateX(100%);
+		}
+
+	}
+
 }

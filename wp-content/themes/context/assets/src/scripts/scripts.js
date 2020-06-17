@@ -7,6 +7,7 @@
  * Hidden Conent Function
  * Accordion
  * Tooltip
+ * Popover Content Functions
  * Footnote
  * Accessible Cards
 ============================================= */
@@ -169,10 +170,50 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Footnote
+	/* Popover Content Functions
 	============================================= */
-	hiddenContentClick('.js--footnote__trigger', '.footnote__panel');
-	/* Footnote [END] */
+	function popoverContentOpen(triggerEle, pannelEle){
+		$(triggerEle).click(function(){
+			var currentState = $(this).attr('aria-expanded'),
+			ariaControls = $(this).attr('aria-controls'),
+			panel = $(pannelEle + '[id="' + ariaControls + '"]');
+
+			$(this).addClass('is-open');
+			$(this).attr('aria-expanded', 'true');
+
+			panel.addClass('is-open');
+			panel.removeAttr('hidden');
+			panel.attr('aria-hidden', 'false');
+			panel.attr('focusable', 'true');
+		});
+	}
+
+
+	function popoverContentClose(closeBtn){
+		$(closeBtn).click(function(){
+			var contentPanelId = $(this).attr('content-panel'),
+				contentPanel = $('#' + contentPanelId),
+				contentTriggerId = $(this).attr('content-trigger'),
+				contentTigger = $('#' + contentTriggerId);
+
+			contentTigger.removeClass('is-open');
+			contentTigger.attr('aria-expanded', 'false');
+
+			contentPanel.removeClass('is-open');
+			contentPanel.attr('hidden', 'hidden');
+			contentPanel.attr('aria-hidden', 'true');
+			contentPanel.attr('focusable', 'false');
+		});
+	}
+	/* Popover Content Functions [END] */
+
+
+
+	/* Footnotes
+	============================================= */
+	popoverContentOpen('.js--footnote__trigger', '.footnote__panel');
+	popoverContentClose('.footnote__close-btn');
+	/* Footnotes [END] */
 
 
 

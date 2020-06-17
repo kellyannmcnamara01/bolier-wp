@@ -43,9 +43,9 @@
 - accordion js functionality (not wp enabled)
 - accessible cards
 - smooth scroll
-- page navigation
-- tooltips
-- footnotes
+- page navigation (not wp enabled)
+- tooltips (not wp enabled)
+- footnotes (not wp enabled)
 
 
 ---
@@ -191,6 +191,8 @@ It is important that each footnote has the following attrs set as unique strings
 - the pannel should have a unique id
 - the trigger's aria-controls should match the pannel's id
 - the pannel's aria-labelledby should match the trigger's id
+- the close btn's `content-panel` should match the pannel's id
+- the close btn's `content-trigger` should match the trigger's id
 
 Here is an example of a footnote:
 ```html
@@ -199,10 +201,18 @@ Here is an example of a footnote:
         <span class="e-reader-only">Open footnote</span>
     </button>
     <div id="footnote-id-1" class="footnote__panel" role="region" aria-labelledby="footnote-1-btn" hidden="true" aria-hidden="true" focusable="false">
-        <p>Footnote One: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lectus est.</p>
+    	<div>
+	        <p>Footnote One: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lectus est.</p>
+	    </div>
+        <button class="footnote__close-btn" content-panel="footnote-id-1" content-trigger="footnote-1-btn">
+        	<span><span class="e-reader-only">Close footnote</span></span>
+			<span></span>
+        </button>
     </div>
 </div>
 ```
+
+*Note: Essentially the footnote currently is a button that triggers a popover*
 
 
 ---
