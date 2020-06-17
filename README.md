@@ -16,6 +16,8 @@
 	- [Footer Lgeal Customization ](#footer-lgeal-customization)
 	- [Social Links Customization](#social-links-customization)
 	- [Back to Top Btn](#back-to-top-btn-customization)
+- [Accordions](#accordions)
+- [Tooltips](#tooltips)
 - [Smooth Scroll](#smooth-scroll)
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
@@ -41,6 +43,7 @@
 - accessible cards
 - smooth scroll
 - page navigation
+- tooltips
 
 
 ---
@@ -130,9 +133,57 @@ Within the customizer a client can toggle the back to top btn on or off within `
 ---
 
 
+## Accordions
+There is a reusable file you can call within a loop when you want to add an accordion. The path to this reusable is: `partials/reusables/accordion.php`. This is currently not set up to hook into WP's admin area.
+
+It is important that each accordion has the following attrs set as unique strings:
+- the trigger should have a unique id
+- the pannel should have a unique id
+- the trigger's aria-controls should match the pannel's id
+- the pannel's aria-labelledby should match the trigger's id
+
+Here is an example of the accordion html markup
+```html
+<div class="accordion" style="padding: 30px; font-size: 16px; background: firebrick;">
+    <button id="accordion-1-btn" class="accordion__trigger js--accordion__trigger" aria-expanded="false" aria-controls="accordion-id-1">Accordion One
+        <span class="e-reader-only">Open Accordion</span>
+    </button>
+    <div id="accordion-id-1" class="accordion__panel" role="region" aria-labelledby="accordion-1-btn" hidden="true" aria-hidden="true" focusable="false">
+        <p>Accordion One: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+</div>
+```
+
+
+---
+
+
+## Tooltips
+Tooltips can either be buttons or inline text. The reusable is file is set up in `partials/reusables/tooltip.php`.
+
+It is important that each tooltip has the following attrs set as unique strings:
+- the trigger should have a unique id
+- the pannel should have a unique id
+- the trigger's aria-controls should match the pannel's id
+- the pannel's aria-labelledby should match the trigger's id
+
+Here is an example of the tooltip button (default file):
+```html
+<span class="tooltip" style="background: khaki;">
+	<button id="tooltip-2-btn" class="tooltip__trigger tooltip__trigger--btn js--tooltip__trigger" aria-expanded="false" aria-controls="tooltip-id-2">Tooltip Btn</button>
+	<span id="tooltip-id-2" class="tooltip__panel" role="tooltip" aria-labelledby="tooltip-2-btn" hidden="true" aria-hidden="true" focusable="false">Tooltip copy placement.</span>
+</span>
+```
+
+To convert a tooltip to be inline, simply swap the class `tooltip__trigger--btn` for `tooltip__trigger--inline`
+
+
+---
+
+
 ## Smooth Scroll
 To activate smooth scroll you need a button/link and an element with an id. 
-```
+```html
 <button scroll="placement-id">Scroll to placement id</button>
 <h1 id="placement-id">Placement ID Title</h1>
 ```
