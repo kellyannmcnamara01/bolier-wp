@@ -7,6 +7,7 @@
  * Hidden Conent Function
  * Accordion
  * Tooltip
+ * Footnote
  * Accessible Cards
 ============================================= */
 
@@ -164,6 +165,14 @@ jQuery(document).ready(function($) {
 	hiddenContentClick('.js--tooltip__trigger', '.tooltip__panel');
 	hiddenContentHover('.js--tooltip__trigger', '.tooltip__panel');
 	/* Tooltip [END] */
+
+
+
+
+	/* Footnote
+	============================================= */
+	hiddenContentClick('.js--footnote__trigger', '.footnote__panel');
+	/* Footnote [END] */
 
 
 

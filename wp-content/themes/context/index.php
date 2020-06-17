@@ -15,23 +15,12 @@
         <div class="row">
 
 
-            <!-- Page Nav
-            ============================================= -->
-            <?php /* get_template_part( 'partials/reusables/nav', 'page' ); */ ?>
-
-
             <main class="page-content col-xs-8" style="padding: 30px; background: lightpink;">
 
 
-                <!-- Popular Posts
+                <!-- 
                 ============================================= -->
-                <?php /* get_template_part( 'partials/reusables/posts', 'popular' ); */ ?>
-
-
-                <!-- Tool Tip
-                ============================================= -->
-                <?php /* get_template_part( 'partials/reusables/tooltip' ); */ ?>
-                <?php /* get_template_part( 'partials/reusables/tooltip', 'inline' ); */ ?>
+                <?php get_template_part( 'partials/reusables/footnote' ); ?>
 
 
                 <!-- Posts

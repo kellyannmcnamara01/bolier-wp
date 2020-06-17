@@ -188,7 +188,7 @@ To activate smooth scroll you need a button/link and an element with an id.
 <h1 id="placement-id">Placement ID Title</h1>
 ```
 
-*Note: You can use this for the page navigation: `partials/reusables/nav-page.php`*
+*Note: You can use this for the page navigation: `partials/reusables/nav-page.php`. Page nav should be placed outside of the `<main>` tag.*
 
 
 ---
