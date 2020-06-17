@@ -2,6 +2,7 @@
 
 	<!-- Title
     ============================================= -->
+    <?php breadcrumbs(); ?>
 	<h1><?php single_post_title(); ?></h1>
 
 

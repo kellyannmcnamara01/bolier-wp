@@ -1,7 +1,6 @@
 <?php 
 /*
  * Template Name: Full Width Page
- * Template Post Type: Post
  */
 ?>
 
