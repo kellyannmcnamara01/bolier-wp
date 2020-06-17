@@ -4,7 +4,9 @@
  * On Page Scroll
  * Top Bar Search
  * Back to Top
+ * Hidden Conent Function
  * Accordion
+ * Tooltip
  * Accessible Cards
 ============================================= */
 
@@ -104,32 +106,64 @@ jQuery(document).ready(function($) {
 
 
 
-	/* Accordion
+	/* Hidden Conent Function
+	 * Used for accordions & tooltips
 	============================================= */
-	$('.js--accordion__trigger').click(function(){
-		var currentState = $(this).attr('aria-expanded'),
-			ariaControls = $(this).attr('aria-controls'),
-			panel = $('.accordion__panel[id="' + ariaControls + '"]');
+	function hiddenContent(currentEle, pannelEle){
+		var currentState = currentEle.attr('aria-expanded'),
+			ariaControls = currentEle.attr('aria-controls'),
+			panel = $(pannelEle + '[id="' + ariaControls + '"]');
 
 		if( currentState == 'false' ){
-			$(this).addClass('is-open');
-			$(this).attr('aria-expanded', 'true');
+			currentEle.addClass('is-open');
+			currentEle.attr('aria-expanded', 'true');
 
 			panel.addClass('is-open');
 			panel.removeAttr('hidden');
 			panel.attr('aria-hidden', 'false');
 			panel.attr('focusable', 'true');
 		} else {
-			$(this).removeClass('is-open');
-			$(this).attr('aria-expanded', 'false');
+			currentEle.removeClass('is-open');
+			currentEle.attr('aria-expanded', 'false');
 
 			panel.removeClass('is-open');
 			panel.attr('hidden', 'hidden');
 			panel.attr('aria-hidden', 'true');
 			panel.attr('focusable', 'false');
 		}
-	});
+	}
+
+	function hiddenContentClick(triggerEle, pannelEle){
+		$(triggerEle).click(function(){
+			var currentEle = $(this);
+			hiddenContent(currentEle, pannelEle);
+		});
+	}
+
+	function hiddenContentHover(triggerEle, pannelEle){
+		$(triggerEle).hover(function(){
+			var currentEle = $(this);
+			hiddenContent(currentEle, pannelEle);
+		});
+	}
+	/* Hidden Content Function [END] */
+
+
+
+
+	/* Accordion
+	============================================= */
+	hiddenContentClick('.js--accordion__trigger', '.accordion__panel');
 	/* Accordion [END] */
+
+
+
+
+	/* Tooltip
+	============================================= */
+	hiddenContentClick('.js--tooltip__trigger', '.tooltip__panel');
+	hiddenContentHover('.js--tooltip__trigger', '.tooltip__panel');
+	/* Tooltip [END] */
 
 
 

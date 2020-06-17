@@ -30,7 +30,8 @@
 
                 <!-- Tool Tip
                 ============================================= -->
-                <?php get_template_part( 'partials/reusables/tooltip' ); ?>
+                <?php /* get_template_part( 'partials/reusables/tooltip' ); */ ?>
+                <?php /* get_template_part( 'partials/reusables/tooltip', 'inline' ); */ ?>
 
 
                 <!-- Posts

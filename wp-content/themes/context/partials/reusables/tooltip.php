@@ -1,1 +1,11 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed dapibus lorem. Donec ullamcorper, ante id venenatis ullamcorper, magna nisi porttitor nulla, rhoncus pulvinar tortor dolor quis est. Suspendisse sollicitudin tortor eros. Vestibulum orci velit, commodo sollicitudin leo ac, vulputate fermentum lectus. Nullam consectetur nunc id metus laoreet viverra id in nisi. <button class="tooltip-trigger" >Phasellus iaculis orci<span></span></button> in nisi ultricies Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sed dapibus lorem. Nec viverra justo euismod. Praesent congue condimentum augue vel elementum. Nullam efficitur diam sapien, quis cursus lacus elementum et. Integer sagittis non tellus ut bibendum. Phasellus egestas risus vitae metus rutrum dictum. In sed bibendum eros. Aliquam quis enim porttitor, sodales ipsum non, porttitor velit.</p>
+<!-- Tooltip
+============================================= -->
+<span class="tooltip" style="background: khaki;">
+	<button id="tooltip-2-btn" class="tooltip__trigger tooltip__trigger--btn js--tooltip__trigger" aria-expanded="false" aria-controls="tooltip-id-2">Tooltip Btn</button>
+	<span id="tooltip-id-2" class="tooltip__panel" role="tooltip" aria-labelledby="tooltip-2-btn" hidden="true" aria-hidden="true" focusable="false">Tooltip copy placement.</span>
+</span>
+
+
+
+
+

@@ -1,0 +1,36 @@
+/* Tooltip
+============================================= */
+.tooltip {
+	position: relative;
+
+	&--inline {
+		display: inline-block;
+	}
+}
+
+.tooltip__trigger {
+
+	&--btn {
+
+	}
+
+	&--inline {
+		background: none;
+		border: none;
+		box-shadow: none;
+		padding: 0;
+		display: inline-block;
+		@extend %body;
+	}
+}
+
+
+.tooltip__panel {
+	position: absolute;
+	background: khaki;
+	z-index: 2;
+	white-space: nowrap;
+	top: calc(100% + 3px);
+	left: 50%;
+	transform: translateX(-50%);
+}
