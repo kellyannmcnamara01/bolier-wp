@@ -6,7 +6,8 @@
 
 ## Index
 - [Built-In Functions](#built-in-functions)
-- [JS Actions](#js-actions)
+- [Naming Conventions](#naming-conventions)
+    - [JS Actions](#js-actions)
 - [Accessibility](#accessibility)
 	- [E-readers text](#e-readers-text)
 	- [Skip to Main Content Btn](#skip-to-main-content-btn)
@@ -53,9 +54,71 @@
 ---
 
 
-## JS Actions
+## Naming Conventions
+The naming convention for this site is heavily based off of [BEM](https://css-tricks.com/bem-101/). Below is an example of how the name convention should be used.
+
+### CSS Breakdown
+
+```css
+/* Block Element */
+.card {}
+
+/* Element Dependent on Block Element */
+.card__title {}
+
+/* Modifier That Changes Base Element */
+.btn {
+    &--large {}
+}
+```
+
+### HTML Breakdown
+
+```html
+/* Block Element */
+class="card"
+
+/* Element Dependent on Block Element */
+class="card__title"
+
+/* Modifier That Changes Base Element */
+class="btn btn--large"
+```
+
+### JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
 - Elements that are targeted by js should have a duplicated class name with the addtiona of `js--` in front. An example of that is `clas-name js--class-name`, this way the scss will not get cluttered with the addtional `js--` and it is easier for a dev to see what elements within the html are targeted by js. This being said if there is a popup and a popup button, you only need to add the addtional `js--` to the button, which is the trigger. 
+
+```html
+<!-- Before Interacted with -->
+class="accordion__trigger js--accordion__trigger"
+
+<!-- After Interacted with -->
+class="accordion__trigger js--accordion__trigger is-open"
+```
+
+### Comments
+Comments should help keep the code clean and easy to scan. All comments should be the same base. Below are examples.
+
+```html
+<!-- Comment Placement
+============================================= -->
+```
+
+```php
+/* Comment Placement
+============================================= */
+```
+
+```css
+/* Comment Placement
+============================================= */
+```
+
+```js
+/* Comment Placement
+============================================= */
+```
 
 
 ---
