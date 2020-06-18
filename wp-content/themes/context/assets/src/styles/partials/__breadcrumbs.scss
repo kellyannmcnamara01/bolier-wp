@@ -3,4 +3,35 @@
 .breadcrumbs {
 	display: flex;
 	font-size: 1rem;
+
+	>li {
+		position: relative;
+		padding-right: 1rem;
+		margin-right: 1rem;
+
+		&::before, &::after {
+			content: "";
+		    display: block;
+		    background: $white;
+		    width: 6px;
+		    height: 1.5px;
+		    position: absolute;
+		    top: 45%;
+		    right: 0;
+		}
+
+		&::before {
+			transform: translate(50%, -100%) rotate(45deg);
+		}
+
+		&::after {
+			transform: translate(50%, 100%) rotate(-45deg);
+		}
+
+		&:last-child {
+			&::before, &::after {
+				display: none;
+			}
+		}
+	}
 }

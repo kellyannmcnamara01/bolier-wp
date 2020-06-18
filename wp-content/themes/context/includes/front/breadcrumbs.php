@@ -6,13 +6,6 @@
 
 
 
-		/* Breadcrumb separator
-		============================================= */
-		$separator = ' > ';
-
-
-
-
 		/* If not homepage
 		============================================= */
 		if ( !is_front_page() ){
@@ -22,6 +15,8 @@
 			/* Start w/ homepage link
 			============================================= */
 			echo '<ul class="breadcrumbs">';
+
+
 				echo '<li><a href="' . get_option('home') . '" class="breadcrumb">';
 				bloginfo('name');
 				echo '</a></li>';
@@ -32,12 +27,9 @@
 				============================================= */
 				if ( is_category() || is_single() ){
 
-					echo $separator;
 					the_category( 'title_li=' );
 
 				} elseif ( is_archive() || is_single() ){
-
-					echo $separator;
 
 					if ( is_day() ){
 
@@ -66,8 +58,7 @@
 				============================================= */
 				if ( is_single() ){
 
-					echo $separator;
-					the_title();
+					echo '<li>' . the_title() . '</li>';
 
 				}
 
@@ -76,7 +67,7 @@
 
 				/* Static page breadcrumb
 				 * set global $post
-				 * check if page is a child else echo $separator & title
+				 * check if page is a child else echo title
 				 * if page is a child get parent link/title
 				============================================= */
 				if ( is_page() ){
@@ -107,18 +98,15 @@
 							$parentUrl		= 		get_permalink( $parent );
 							$parentTitle	=		get_the_title( $parent );
 
-							echo $separator;
 							echo '<li><a href="' . $parentUrl . '" class="breadcrumb">' . $parentTitle . '</a></li>';
 
 						}
 
-						echo $separator;
-						the_title();
+						echo '<li>' . the_title() . '</li>';
 
 
 					} else {
-					    echo $separator;
-						the_title();
+						echo '<li>' . the_title() . '</li>';
 					}
 
 					wp_reset_query();
