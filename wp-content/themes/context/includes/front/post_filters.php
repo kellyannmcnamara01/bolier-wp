@@ -16,79 +16,93 @@ function context_post_filters_function(){
 
 	/* Check isset and fill arrays
 	============================================= */
-	// $categoryfilterdropdown = [];
- // 	if( isset( $_POST['categoryfilterdropdown'] ) ) {
- // 		$categoryfilterdropdown = $_POST['categoryfilterdropdown'];
- // 	}
+	$categoryfilterdropdown = [];
+ 	if( isset( $_POST['categoryfilterdropdown'] ) ) {
+ 		array_push( $categoryfilterdropdown , $_POST['categoryfilterdropdown'] );
+ 	}
 
- // 	$categoryfiltercheckboxes = [];
- // 	if( isset( $_POST['categoryfiltercheckboxes'] ) ) {
- // 		$categoryfiltercheckboxes = $_POST['categoryfiltercheckboxes'];
- // 	}
+ 	$categoryfiltercheckboxes = [];
+ 	if( isset( $_POST['categoryfiltercheckboxes'] ) ) {
+ 		$categoryfiltercheckboxes = $_POST['categoryfiltercheckboxes'];
+ 	}
 
- // 	$terms = array_merge( $categoryfilterdropdown, $categoryfiltercheckboxes );
+ 	$categoryfilterradios = [];
+ 	if( isset( $_POST['categoryfilterradios'] ) ) {
+ 		$categoryfilterradios = $_POST['categoryfilterradios'];
+ 	}
 
- // 	print_r($terms);
 
- // 	$args['tax_query'] = array(
-	// 	array(
-	// 		'taxonomy' => 'category',
-	// 		'field' => 'id',
-	// 		'terms' => $terms
-	// 	)
-	// );
+
+
+ 	/* Create $terms array for all categories selected in different fields
+	============================================= */
+ 	$terms = array_merge( 
+ 		$categoryfilterdropdown, 
+ 		$categoryfiltercheckboxes,
+ 		$categoryfilterradios
+ 	);
+
+
+ 	$args['tax_query'] = array(
+		array(
+			'taxonomy' => 'category',
+			'field' => 'id',
+			'terms' => $terms
+		)
+	);
 
 
 
 	/* Dropdown category filter example
 	============================================= */
-	if( isset( $_POST['categoryfilterdropdown'] ) ) {
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'category',
-				'field' => 'id',
-				'terms' => $_POST['categoryfilterdropdown']
-			)
-		);
-	}
+	// if( isset( $_POST['categoryfilterdropdown'] ) ) {
+	// 	$args['tax_query'] = array(
+	// 		array(
+	// 			'taxonomy' => 'category',
+	// 			'field' => 'id',
+	// 			'terms' => $_POST['categoryfilterdropdown']
+	// 		)
+	// 	);
+	// }
 
 
 
 
 	/* Multi-Checkboxes category filter example
 	============================================= */
-	if( isset( $_POST['categoryfiltercheckboxes'] ) ) {
+	// if( isset( $_POST['categoryfiltercheckboxes'] ) ) {
 
-		$checkedArray = $_POST['categoryfiltercheckboxes'];
+	// 	$checkedArray = $_POST['categoryfiltercheckboxes'];
 
-		$args['tax_query'] = array(
-			array(
-				'taxonomy' => 'category',
-				'field' => 'id',
-				'terms' => $checkedArray
-			)
-		);
-	}
- 
- 
-	// if post thumbnail is set
-	// if( isset( $_POST['featured_image'] ) && $_POST['featured_image'] == 'on' )
-	// 	$args['meta_query'][] = array(
-	// 		'key' => '_thumbnail_id',
-	// 		'compare' => 'EXISTS'
+	// 	$args['tax_query'] = array(
+	// 		array(
+	// 			'taxonomy' => 'category',
+	// 			'field' => 'id',
+	// 			'terms' => $checkedArray
+	// 		)
 	// 	);
-	// if you want to use multiple checkboxed, just duplicate the above 5 lines for each checkbox
+	// }
  
+
+
+ 
+ 	/* Final query and return
+	============================================= */
 	$query = new WP_Query( $args );
  
-	if( $query->have_posts() ) :
+	if( $query->have_posts() ) {
+
 		while( $query->have_posts() ): $query->the_post();
 			echo '<h2>' . $query->post->post_title . '</h2>';
 		endwhile;
+
 		wp_reset_postdata();
-	else :
+
+	} else {
+
 		echo 'No posts found';
-	endif;
+
+	}
  
 	die();
 }
