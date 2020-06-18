@@ -7,7 +7,10 @@
 ## Index
 - [Built-In Functions](#built-in-functions)
 - [Naming Conventions](#naming-conventions)
+    - [CSS Breakdown](#css-breakdown)
+    - [HTML Breakdown](#html-breakdown)
     - [JS Actions](#js-actions)
+    - [Comments](#comments)
 - [Accessibility](#accessibility)
 	- [E-readers text](#e-readers-text)
 	- [Skip to Main Content Btn](#skip-to-main-content-btn)
