@@ -22,6 +22,7 @@
 - [Smooth Scroll](#smooth-scroll)
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
+- [Breadcrumbs](#breadcrumbs)
 
 
 ---
@@ -46,6 +47,7 @@
 - page navigation (not wp enabled)
 - tooltips (not wp enabled)
 - footnotes (not wp enabled)
+- breadcrumbs
 
 
 ---
@@ -240,3 +242,13 @@ Within `assets/scr/scripts/partials/cookies.js` you will find reusable functions
 
 ## Search Highlight
 At the bottom of the search php page you will find a script. *It is required to be there due to the direct php we are echoing into the js.* At the very bottom of it you will see that the `highlightSearchedTerm()` is being called and passing through the elements that the function needs to look through. I have it set particularly like that so the page doesn't crash go through every element on it. Update the elements to adjust to your theme's html markup.
+
+
+___
+
+
+## Breadcrumbs
+Breadcrumbs will echo out the parent levels, or corresponding page titles. To echo breadcumbs simply place the code snippet `<?php breadcrumbs(); ?>`. Currently this code snippet is being called in all headers. To access the breadcrumb function go to `includes/front/breadcrumbs.php`. 
+
+*Accessibility Note: the separators are created using sudo elements becuase e-readers will try and read them otherwise.* 
+
