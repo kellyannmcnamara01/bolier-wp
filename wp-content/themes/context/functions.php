@@ -15,6 +15,7 @@
 	include( get_theme_file_path( '/includes/customizer/misc.php' ) );
 	include( get_theme_file_path( '/includes/customizer/footer.php' ) );
 	include( get_theme_file_path( '/includes/customizer/enqueue.php' ) );
+	include( get_theme_file_path( '/includes/front/post_filters.php' ) );
 
 
 	// hooks
@@ -23,6 +24,8 @@
 	add_action( 'widgets_init', 'context_widgets' );
 	add_action( 'customize_register', 'context_customize_register' );
 	add_action( 'customize_preview_init', 'context_customize_preview_init' );
+	add_action('wp_ajax_post_filter', 'context_post_filters_function'); // wp_ajax_{ACTION HERE} 
+	add_action('wp_ajax_nopriv_post_filter', 'context_post_filters_function'); // wp_ajax_nopriv_{ACTION HERE} 
 
 
 	// shortcodes

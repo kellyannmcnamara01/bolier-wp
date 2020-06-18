@@ -81,22 +81,22 @@
 						 * Reverse array and loop through each parent breadcumb
 						 * Echo out current page title
 						============================================= */
-						$depth				=		count($post->ancestors);
-						$parentArray		=		[];
+						$depth					=		count($post->ancestors);
+						$parentArray			=		[];
 
 						for ($x = 1; $x <= $depth; $x++) {
 							
-							$parentId 		= 		wp_get_post_parent_id( $post->ID );
-							array_push( $parentArray, $parentId);
+							$parentId 			= 		wp_get_post_parent_id( $post->ID );
+							array_push( $parentArray, $parentId );
 							$post->ID 			=	$parentId;
 
 						}
 
-						$parentArrayReverse = array_reverse($parentArray);
+						$parentArrayReverse 	= array_reverse($parentArray);
 
 						foreach( $parentArrayReverse as $parent ) {
-							$parentUrl		= 		get_permalink( $parent );
-							$parentTitle	=		get_the_title( $parent );
+							$parentUrl			= 		get_permalink( $parent );
+							$parentTitle		=		get_the_title( $parent );
 
 							echo '<li><a href="' . $parentUrl . '" class="breadcrumb">' . $parentTitle . '</a></li>';
 
