@@ -17,7 +17,6 @@
 		
 		<div class="row">
 
-
 			<!-- Post Content
 			============================================= -->
 			<main class="post-content col-xs-8" style="background: orchid; color: white; padding: 30px; font-size: 16px;">
@@ -32,6 +31,8 @@
 							$author_URL		= get_author_posts_url( $author_ID );
 
 							?>
+
+							<?php context_set_post_view(); ?>
 
 							<!-- Post General Infromation
 							============================================= -->

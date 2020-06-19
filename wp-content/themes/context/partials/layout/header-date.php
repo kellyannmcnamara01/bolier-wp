@@ -1,8 +1,15 @@
 <div class="header--date" style="background: mediumspringgreen; color: black; padding: 30px; font-size: 30px;">
 
-	<!-- Title/Desc
+
+	<!-- Breadcrumbs
     ============================================= -->
     <?php breadcrumbs(); ?>
+
+
+
+
+	<!-- Title/Desc
+    ============================================= -->
 	<h1><?php the_archive_title(); ?></h1>
 	<p>
 		<?php
