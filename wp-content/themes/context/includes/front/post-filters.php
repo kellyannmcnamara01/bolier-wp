@@ -6,10 +6,29 @@ function context_post_filters_function(){
 
 	/* Setting up base $args
 	============================================= */
-	$args = array(
-		'orderby' => 'date', // sort by date
-		'order'	=> $_POST['dateorder'] // ASC or DESC
-	);
+	// $args = array(
+	// 	'orderby' => 'date', // sort by date
+	// 	'order'	=> $_POST['dateorder'] // ASC or DESC
+	// );
+
+	if ( $_POST['orderby'] == 'popular' ) {
+
+		$args = array(
+			'meta_key' => 'post_views_count',
+			'orderby' => 'meta_value_num', 
+			'order' => 'DESC'
+		);
+
+	} else {
+
+		$args = array(
+			'orderby' => 'date', // sort by date
+			'order'	=> $_POST['orderby'] // ASC or DESC
+		);
+
+	}
+
+
 
 
 

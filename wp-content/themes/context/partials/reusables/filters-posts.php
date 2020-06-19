@@ -22,7 +22,7 @@
 		'parent' 		=> 	14
 	);
 
-	$tags			=	get_tags(array(
+	$tags				=	get_tags(array(
   		'hide_empty' 	=> 	false
 	));
 
@@ -34,6 +34,16 @@
 ============================================= -->
 <form action="<?php echo $adminAjax; ?>" method="POST" id="filter">
 
+
+
+	<?php 
+$popularpost = new WP_Query( array( 'posts_per_page' => 4, 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'DESC'  ) );
+while ( $popularpost->have_posts() ) : $popularpost->the_post();
+ 
+the_title();
+ 
+endwhile;
+?>
 
 
 
@@ -115,10 +125,10 @@
 
 	<!-- Date order dropdown
 	============================================= -->
-	<select name="dateorder">
-		<option value="">Order Date By</option>
+	<select name="orderby">
 		<option value="DESC">Newest</option>
 		<option value="ASC">Oldest</option>
+		<option value="popular">Popularity</option>
 	</select>
 	
 

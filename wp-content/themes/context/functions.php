@@ -34,8 +34,6 @@
 	add_action( 'customize_preview_init', 'context_customize_preview_init' );
 	add_action( 'wp_ajax_post_filter', 'context_post_filters_function' ); // wp_ajax_{ACTION HERE} 
 	add_action( 'wp_ajax_nopriv_post_filter', 'context_post_filters_function' ); // wp_ajax_nopriv_{ACTION HERE} 
-	add_filter( 'manage_posts_columns', 'context_posts_column_views' );
-	add_action( 'manage_posts_custom_column', 'context_posts_custom_column_views' );
 
 
 
