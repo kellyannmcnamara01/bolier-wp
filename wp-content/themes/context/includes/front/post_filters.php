@@ -31,6 +31,11 @@ function context_post_filters_function(){
  		$categoryfilterradios = $_POST['categoryfilterradios'];
  	}
 
+ 	$tagcheckboxes = [];
+ 	if( isset( $_POST['tagcheckboxes'] ) ) {
+ 		$tagcheckboxes = $_POST['tagcheckboxes'];
+ 	}
+
 
 
 
@@ -54,6 +59,12 @@ function context_post_filters_function(){
 			'taxonomy' => 'category',
 			'field' => 'id',
 			'terms' => $categoryfilterradios,
+			'operator' => 'AND'
+		),
+		array(
+			'taxonomy' => 'post_tag',
+			'field' => 'id',
+			'terms' => $tagcheckboxes,
 			'operator' => 'AND'
 		),
 	);

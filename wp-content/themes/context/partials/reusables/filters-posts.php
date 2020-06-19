@@ -22,6 +22,10 @@
 		'parent' 		=> 	14
 	);
 
+	$tags			=	get_tags(array(
+  		'hide_empty' 	=> 	false
+	));
+
 ?>
 
 
@@ -58,7 +62,7 @@
 
 		if( $terms = get_terms( $termsColourArray ) ){
 
-			echo '<div><div>Select a Colour</div>';
+			echo '<div><div>Select Colours</div>';
 			foreach ( $terms as $term ) {
 				echo '<label><input type="checkbox" name="categoryfiltercheckboxes[]" value="' . $term->term_id . '" />' . $term->name . '</label>';
 			}
@@ -80,6 +84,25 @@
 			echo '<div><div>Select a Location</div>';
 			foreach ( $terms as $term ) {
 				echo '<label><input type="radio" name="categoryfilterradios[]" value="' . $term->term_id . '" />' . $term->name . '</label>';
+			}
+			echo '</div><br><br>';
+
+		}
+
+	?>
+
+
+
+
+	<!-- Multi-checkmark tags
+	============================================= -->
+	<?php
+
+		if( $tags ){
+
+			echo '<div><div>Select Tags</div>';
+			foreach ( $tags as $tag ) {
+				echo '<label><input type="checkbox" name="tagcheckboxes[]" value="' . $tag->ID . '" />' . $tag->name . '</label>';
 			}
 			echo '</div><br><br>';
 
