@@ -18,6 +18,12 @@
             <main class="page-content col-xs-8" style="padding: 30px; background: lightpink;">
 
 
+                <!-- Post Filters
+                ============================================= -->
+                <?php get_template_part( 'partials/reusables/filters', 'posts' ); ?>
+
+
+
                 <!-- Posts
                 ============================================= -->
                 <?php get_template_part( 'partials/reusables/posts' ); ?>

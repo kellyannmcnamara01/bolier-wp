@@ -101,7 +101,7 @@
 
 
 
-	<button>Apply filter</button>
+	<span></span>
 
 	<!-- Hidden input to connect to functions.php -> add_action()
 	============================================= -->
@@ -127,7 +127,7 @@
 <script>
 	// source: https://rudrastyh.com/wordpress/ajax-post-filters.html
 	jQuery(function($){
-		$('#filter').submit(function(){
+		function ajaxPostsFilter(){
 			var filter = $('#filter');
 
 			$.ajax({
@@ -135,14 +135,22 @@
 				data:filter.serialize(), // form data
 				type:filter.attr('method'), // POST
 				beforeSend:function(xhr){
-					filter.find('button').text('Processing...'); // changing the button label
+					filter.find('span').text('Processing...');
 				},
 				success:function(data){
-					filter.find('button').text('Apply filter'); // changing the button label back
+					filter.find('span').text('Results'); 
 					$('#response').html(data); // insert data
 				}
 			});
 			return false;
+		}
+
+		$("#filter input").change(function(){
+			ajaxPostsFilter();
+		});
+
+		$("#filter select").change(function(){
+			ajaxPostsFilter();
 		});
 	});
 </script>

@@ -34,22 +34,36 @@ function context_post_filters_function(){
 
 
 
- 	/* Create $terms array for all categories selected in different fields
+ 	/* Comparative query
 	============================================= */
- 	$terms = array_merge( 
- 		$categoryfilterdropdown, 
- 		$categoryfiltercheckboxes,
- 		$categoryfilterradios
- 	);
-
-
- 	$args['tax_query'] = array(
+	$args['tax_query'] = array(
+		'relation' => 'AND',
 		array(
 			'taxonomy' => 'category',
 			'field' => 'id',
-			'terms' => $terms
-		)
+			'terms' => $categoryfilterdropdown,
+			'operator' => 'AND'
+		),
+		array(
+			'taxonomy' => 'category',
+			'field' => 'id',
+			'terms' => $categoryfiltercheckboxes,
+			'operator' => 'AND'
+		),
+		array(
+			'taxonomy' => 'category',
+			'field' => 'id',
+			'terms' => $categoryfilterradios,
+			'operator' => 'AND'
+		),
 	);
+
+
+
+
+ 	/* The below examples are if categories were not in several fields
+	============================================= */
+
 
 
 
