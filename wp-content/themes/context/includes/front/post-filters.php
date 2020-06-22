@@ -6,11 +6,6 @@ function context_post_filters_function(){
 
 	/* Setting up base $args
 	============================================= */
-	// $args = array(
-	// 	'orderby' => 'date', // sort by date
-	// 	'order'	=> $_POST['dateorder'] // ASC or DESC
-	// );
-
 	if ( $_POST['orderby'] == 'popular' ) {
 
 		$args = array(

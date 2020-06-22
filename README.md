@@ -28,6 +28,7 @@
 - [Search Highlight](#search-highlight)
 - [Breadcrumbs](#breadcrumbs)
 - [Post View Count](#post-view-count)
+- [Ajax Filtering](#ajax-filtering)
 
 
 ---
@@ -53,8 +54,8 @@
 - tooltips (not wp enabled)
 - footnotes (not wp enabled)
 - breadcrumbs
-- count post view count
-- ajax filtering - dropdown, multi-checkboxes, radios, by multi categories (in multi fields), by tags, by post view counts
+- post view count
+- ajax filtering
 
 
 ---
@@ -338,4 +339,51 @@ You can also filter a WP_Query by post views by adding the following lines of ph
 *Note: `post_views_count` is a new field created in the database when a page is viewed. For pages to appear within filters using the `post_views_count` field a page must have one view, otherwise the post won't have that field in the admin* 
 
 *Additional Note: If you are loged into the admin panel your views will not be counted.*
+
+
+___
+
+
+## Ajax Filtering
+For ajax filtering to work there are three main files.
+1. `partials/reusables/filters-posts.php` - the front end filters
+2. `assets/src/scripts/partials/ajax-filters.js` – the ajax calls
+3. `includes/front/post-filters.php` – the php queries
+
+### Front-end Filters
+`partials/reusables/filters-posts.php`
+
+How to set up filters
+1. Set up `$adminAjax` var to the `wp-admin/admin-ajax.php` file
+2. Set up the different query arrays as vars
+3. Create a form tag with an id and action set to the $adminAjax location
+4. Within the form add your fields that use the query array vars from step 1
+5. At the bottom of the form add a hidden field that connects to the functions.php -> add_action();
+    - **IMPORTANT**: the hidden field in step 5, it's value should match the add_action()s in functions.php 
+    - hidden field's value: `value="FIELD_VALUE"`
+    - functions.php add action: `add_action( 'wp_ajax_FIELD_VALUE', 'SITENAME_POST_FILTER_FUNCTION_NAME' );`
+    - functions.php add action: `add_action( 'wp_ajax_nopriv_FIELD_VALUE', 'SITENAME_POST_FILTER_FUNCTION_NAME' );`
+6. Create a div that will replace it's current contents with the filtered contents
+7. Edit corresponding js file found: assets/src/scripts/partials.ajax-filters.js
+8. Edit corresponsing php file found: includes/front/post-filters.php 
+
+### Ajax Calls
+`assets/src/scripts/partials/ajax-filters.js`
+
+How to create a ajaxPostsFilter function
+
+1. Create a function
+2. Create a var that gets the form by it's id
+3. Create an ajax instance and within it:
+    - Set the url to the form's action
+    - Set the datatype to serialize()
+    - Set type to form's method (POST)
+    - Set beforeSend to trigger loader of choice
+    - Set success to fill div with results by grabbing the id
+    - **IMPORTANT**: this will remove all the current content's and replace it with the ajax results
+4. Return false after ajax instance
+5. Create triggers to call the filter function
+    - Example: $('#form input').change(function(){YourFilterFunction();});
+
+### PHP Filter Queries
 

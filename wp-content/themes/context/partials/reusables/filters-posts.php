@@ -1,5 +1,25 @@
 <?php 
 
+
+	/* How to set up filters
+	 *
+	 * 1. Set up $adminAjax var to the wp-admin/admin-ajax.php file
+	 * 2. Set up the different query arrays as vars
+	 * 3. Create a form tag with an id and action set to the $adminAjax location
+	 * 4. Within the form add your fields that use the query array vars from step 1
+	 * 5. At the bottom of the form add a hidden field that connects to the functions.php -> add_action();
+	 * ** IMPORTANT: the hidden field in step 5, it's value should match the add_action()s in functions.php 
+	 *    hidden field's value: FIELD_VALUE
+	 *    add_action( 'wp_ajax_FIELD_VALUE', 'SITENAME_POST_FILTER_FUNCTION_NAME' );
+	 *    add_action( 'wp_ajax_nopriv_FIELD_VALUE', 'SITENAME_POST_FILTER_FUNCTION_NAME' );
+	 * 6. Create a div that will replace it's current contents with the filtered contents
+	 * 7. Edit corresponding js file found: assets/src/scripts/partials.ajax-filters.js
+	 * 8. Edit corresponsing php file found: includes/front/post-filters.php 
+	============================================= */
+
+
+
+	
 	/* Setting up vars
 	============================================= */
 	$adminAjax 			=	site_url() . '/wp-admin/admin-ajax.php';
@@ -155,35 +175,3 @@ endwhile;
 		}
 	?>
 </div>
-
-
-<script>
-	// source: https://rudrastyh.com/wordpress/ajax-post-filters.html
-	jQuery(function($){
-		function ajaxPostsFilter(){
-			var filter = $('#filter');
-
-			$.ajax({
-				url:filter.attr('action'),
-				data:filter.serialize(), // form data
-				type:filter.attr('method'), // POST
-				beforeSend:function(xhr){
-					filter.find('span').text('Processing...');
-				},
-				success:function(data){
-					filter.find('span').text('Results'); 
-					$('#response').html(data); // insert data
-				}
-			});
-			return false;
-		}
-
-		$("#filter input").change(function(){
-			ajaxPostsFilter();
-		});
-
-		$("#filter select").change(function(){
-			ajaxPostsFilter();
-		});
-	});
-</script>
