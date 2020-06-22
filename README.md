@@ -27,6 +27,7 @@
 - [Cookies](#cookies)
 - [Search Highlight](#search-highlight)
 - [Breadcrumbs](#breadcrumbs)
+- [Post View Count](#post-view-count)
 
 
 ---
@@ -52,6 +53,8 @@
 - tooltips (not wp enabled)
 - footnotes (not wp enabled)
 - breadcrumbs
+- count post view count
+- ajax filtering - dropdown, multi-checkboxes, radios, by multi categories (in multi fields), by tags, by post view counts
 
 
 ---
@@ -316,5 +319,23 @@ ___
 ## Breadcrumbs
 Breadcrumbs will echo out the parent levels, or corresponding page titles. To echo breadcumbs simply place the code snippet `<?php breadcrumbs(); ?>`. Currently this code snippet is being called in all headers. To access the breadcrumb function go to `includes/front/breadcrumbs.php`. 
 
-*Accessibility Note: the separators are created using sudo elements becuase e-readers will try and read them otherwise.* 
+*Accessibility Note: the separators are created using sudo elements becuase e-readers will try and read them otherwise.*
+
+
+___
+
+
+## Post View Count
+Within `includes/front/post-views.php` there is functionality that counts the total views of a **post** and allows you to display that count by calling the function `<?php echo context_get_post_view(); ?>`. For the post to have the functionality to count views you **must include** `<?php get_template_part( 'includes/front/post-views' ); ?>` **on all posts**.
+
+You can also filter a WP_Query by post views by adding the following lines of php in the query array.
+```php
+'meta_key' => 'post_views_count',
+'orderby' => 'meta_value_num', 
+'order' => 'DESC'
+```
+
+*Note: `post_views_count` is a new field created in the database when a page is viewed. For pages to appear within filters using the `post_views_count` field a page must have one view, otherwise the post won't have that field in the admin* 
+
+*Additional Note: If you are loged into the admin panel your views will not be counted.*
 
