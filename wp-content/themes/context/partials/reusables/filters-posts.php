@@ -163,6 +163,16 @@ endwhile;
 
 
 
+	<!-- Layout style radios
+	============================================= -->
+	<div><div>Select a Location</div>
+	<label><input type="radio" name="layoutStyle" value="rows" />Rows</label>
+	<label><input type="radio" name="layoutStyle" value="blocks" />Blocks</label>
+	</div><br><br>
+
+
+
+
 	<span></span>
 
 
@@ -184,10 +194,10 @@ endwhile;
 	<?php
 		if( have_posts() ){
 			echo '<ul>';
-			while( have_posts() ){
-				the_post();
-				echo '<li>' . the_title() . '</li>';
-			}
+				while( have_posts() ){
+					the_post();
+					get_template_part( 'partials/posts/content-excerpt' );
+				}
 			echo '</ul>';
 		}
 	?>

@@ -37,13 +37,14 @@
 ---
 
 
-## Built-In Functions (outside of the index)
+## Built-In Functions (outside of the index items)
 - IE-friendly grid
 - top bar search toggles with btn
 - top bar hides on scroll down, shows on scroll up
 - mobile navigation with base styled hamham trigger
 - custom theme options in the customizer
 - page navigation (not wp enabled)
+- email popup after 5s (uses cookies)
 
 
 ---

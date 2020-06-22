@@ -1,0 +1,30 @@
+/* Post Cards
+============================================= */
+.post-cards {
+
+	border: solid 20px blue;
+
+	&.blocks {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		.post-card {
+			width: 48%;
+		}
+	}
+}
+
+
+
+
+/* Post Card
+============================================= */
+.post-card {
+
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
+}

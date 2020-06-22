@@ -46,6 +46,17 @@ function context_post_filters_function(){
 
 
 
+	/* Layout Style
+	============================================= */
+	$layout = 'row';
+	if ( isset( $_POST['layoutStyle'] ) ) {
+		if ( $_POST['layoutStyle'] == 'blocks' ) {
+			$layout = 'blocks';
+		}
+	}
+
+
+
 	/* Check isset and fill arrays
 	============================================= */
 	$categoryfilterdropdown = [];
@@ -149,9 +160,18 @@ function context_post_filters_function(){
  
 	if( $query->have_posts() ) {
 
+		if ( $layout == 'blocks' ) {
+			echo '<ul class="post-cards blocks">';
+		} else {
+			echo '<ul class="post-cards">';
+		}
+
 		while( $query->have_posts() ): $query->the_post();
-			echo '<h2>' . $query->post->post_title . '</h2>';
+			get_template_part( 'partials/posts/content-excerpt' );
 		endwhile;
+
+
+		echo '</ul>';
 
 		wp_reset_postdata();
 
