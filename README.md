@@ -29,6 +29,9 @@
 - [Breadcrumbs](#breadcrumbs)
 - [Post View Count](#post-view-count)
 - [Ajax Filtering](#ajax-filtering)
+    - [Front-End Filters](#front-end-filters)
+    - [Ajax Calls](#ajax-calls)
+    - [PHP Filter Queries](#php-filter-queries)
 
 
 ---
