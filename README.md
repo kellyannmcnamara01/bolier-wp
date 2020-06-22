@@ -37,28 +37,13 @@
 ---
 
 
-## Built-In Functions
-- `e-reader-only` class
-- skip to main content btn
+## Built-In Functions (outside of the index)
 - IE-friendly grid
-- search highlight
 - top bar search toggles with btn
 - top bar hides on scroll down, shows on scroll up
 - mobile navigation with base styled hamham trigger
-- cookies function + cookie banner
 - custom theme options in the customizer
-- custom footer options in the customerizer
-- custom social options in the customerizer
-- back to top btn w/ customerizer toogle
-- accordion js functionality (not wp enabled)
-- accessible cards
-- smooth scroll
 - page navigation (not wp enabled)
-- tooltips (not wp enabled)
-- footnotes (not wp enabled)
-- breadcrumbs
-- post view count
-- ajax filtering
 
 
 ---
