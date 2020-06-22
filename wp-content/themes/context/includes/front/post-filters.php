@@ -4,7 +4,7 @@ function context_post_filters_function(){
 
 
 
-	/* Setting up base $args
+	/* Order By Queries
 	============================================= */
 	if ( $_POST['orderby'] == 'popular' ) {
 
@@ -24,6 +24,24 @@ function context_post_filters_function(){
 	}
 
 
+
+
+	/* Date Range Query
+	============================================= */
+	$startDate = '';
+	if ( isset( $_POST['startDateSelection'] ) ) {
+		$startDate = $_POST['startDateSelection'];
+	}
+
+	$endDate = '';
+	if ( isset( $_POST['endDateSelection'] ) ) {
+		$endDate = $_POST['endDateSelection'];
+	}
+
+	$args['date_query'] = array(
+        'after' => $startDate,
+        'before' => $endDate,
+	);
 
 
 
@@ -53,7 +71,7 @@ function context_post_filters_function(){
 
 
 
- 	/* Comparative query
+ 	/* Comparative Query
 	============================================= */
 	$args['tax_query'] = array(
 		'relation' => 'AND',

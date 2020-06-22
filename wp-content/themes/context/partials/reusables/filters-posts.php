@@ -142,6 +142,13 @@ endwhile;
 
 
 
+	<!-- Date Selection
+	============================================= -->
+	<label>Start Date: <input type="date" name="startDateSelection"></label><br>
+	<label>End Date: <input type="date" name="endDateSelection"></label>
+
+
+
 
 	<!-- Date order dropdown
 	============================================= -->
