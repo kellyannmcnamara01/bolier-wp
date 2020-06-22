@@ -20,8 +20,13 @@
 		 * Keep the template part in to track page views even if we aren't going to display them. 
 		 * Allows for sort by most popular functionailty in filters
     ============================================= -->
-	<?php get_template_part( 'includes/front/post-views' ); ?>
-	<span style="padding: 5px; background: darkkhaki; font-size: 15px; display: block; color: #000;">Page Views: <?php echo context_get_post_view(); ?></span>
+	<?php
+		if( get_post_type($post) == 'post' ){
+			echo '<span style="padding: 5px; background: darkkhaki; font-size: 15px; display: block; color: #000;">Page Views:';
+			echo context_get_post_view();
+			echo '</span>';
+		}
+	?>
 
 
 

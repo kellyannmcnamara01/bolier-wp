@@ -390,5 +390,5 @@ To update the current icomoon library, simple head to [icomoon](https://icomoon.
 
 When naming the svg files you upload makesure you **do not** include the name icon in the file name. Icomoon will automatically add the word `icon-` infront of every icon. 
 
-Additionally, to make sure that icons are accessible it is **required** to add `img="role"` to the `<i>` tag. 
+Additionally, to make sure that icons are accessible it is **required** to add `role="img"` to the `<i>` tag. 
 
