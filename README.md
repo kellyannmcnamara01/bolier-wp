@@ -32,6 +32,7 @@
     - [Front-End Filters](#front-end-filters)
     - [Ajax Calls](#ajax-calls)
     - [PHP Filter Queries](#php-filter-queries)
+- [Icon Library](#icon-library)
 
 
 ---
@@ -377,4 +378,17 @@ How to create a ajaxPostsFilter function
     - Example: $('#form input').change(function(){YourFilterFunction();});
 
 ### PHP Filter Queries
+
+
+___
+
+
+## Icon Library
+For icons we use [icomoon](https://icomoon.io/app). It allows us to either select from their icons or upload svg icons of our own into projects and then export them into jason/css. 
+
+To update the current icomoon library, simple head to [icomoon](https://icomoon.io/app) and click `import icons` -> navigate to the `assets/fonts/icomoon` folder and select the `selection.json` file. When you upload that file into icomoon it will load all out current icons. It's **important** to always upload the current selection.json file so we don't loose icons. Then once uploaded, load the project, import icons and make sure they are all part of the same group. Then click export. 
+
+When naming the svg files you upload makesure you **do not** include the name icon in the file name. Icomoon will automatically add the word `icon-` infront of every icon. 
+
+Additionally, to make sure that icons are accessible it is **required** to add `img="role"` to the `<i>` tag. 
 
