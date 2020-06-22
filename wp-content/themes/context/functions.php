@@ -20,7 +20,7 @@
 	include( get_theme_file_path( '/includes/customizer/footer.php' ) );
 	include( get_theme_file_path( '/includes/customizer/enqueue.php' ) );
 	include( get_theme_file_path( '/includes/front/post-filters.php' ) );
-	// include( get_theme_file_path( '/includes/front/post-views.php' ) );
+	include( get_theme_file_path( '/includes/front/post-views.php' ) );
 
 
 

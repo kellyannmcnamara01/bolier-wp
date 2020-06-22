@@ -5,6 +5,7 @@
 	position: fixed;
 	transition: 0.35s ease all;
 	padding: 1rem;
+	z-index: 8;
 
 	&.is-hiding {
 		transform: translateY(-100%);

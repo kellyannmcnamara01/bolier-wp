@@ -62,6 +62,7 @@
 
 
 
+
 	<!-- Skip to Main Content Btn
     ============================================= -->
     <a class="e-reader-only" href="#main-content">Skip to main content</a>
@@ -69,10 +70,20 @@
 
 
 
+
     <!-- Cookie Banner
     ============================================= -->
     <?php get_template_part( 'partials/layout/cookie-banner' ); ?>
     <!-- Cookie Banner [END] -->
+
+
+
+
+    <!-- Email Popup
+    ============================================= -->
+    <?php get_template_part( 'partials/reusables/popup', 'email' ); ?>
+    <!-- Email Popup [END] -->
+
 
 
 

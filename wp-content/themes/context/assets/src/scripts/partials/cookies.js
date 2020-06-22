@@ -40,7 +40,7 @@ jQuery(function($) {
 			document.cookie = cookieName + '=accepted-cookies; expires=' + expiryDate;
 
 			/* hide cookie banner */
-			$(cookieContainer).slideToggle();
+			$(cookieContainer).fadeOut();
 
 			/* update aria-pressed role */
 			$(this).attr('aria-pressed', 'true');
@@ -58,8 +58,8 @@ jQuery(function($) {
 
 	/* vars to pass for the acceptCookie function */
 	var closeCookieBtn = '.js--cookie-banner__btn',
-	cookieName = 'context-cookie',
-	cookieContainer = '.cookie-banner';
+		cookieName = 'context-cookie',
+		cookieContainer = '.cookie-banner';
 
 	/* check if cookie exists or not
 	 * if does not exists then show banner and call acceptCookie() function
@@ -70,5 +70,28 @@ jQuery(function($) {
 		$('.cookie-banner').hide();
 	}
 	/* Cookie Banner [END] */
+
+
+
+
+	/* Email Popup
+	============================================= */
+	var checkingEmailCookie = getCookie('context-email-cookie');
+
+	var closeEmailCookieBtn = '.js--email-popup__close-btn',
+		closeEmailSubmitCookieBtn = '.js--email-popup input[type="submit"]',
+		cookieEmailName = 'context-email-cookie',
+		cookieEmailContainer = '.email-popup';
+
+	if (checkingEmailCookie == null) {
+		setTimeout(function(){
+			$('.js--email-popup').addClass('is-showing');
+		}, 5000);
+		acceptCookie(closeEmailCookieBtn, cookieEmailName, cookieEmailContainer);
+		acceptCookie(closeEmailSubmitCookieBtn, cookieEmailName, cookieEmailContainer);
+	} else {
+		$('.email-popup').hide();
+	}
+	/* Emal Popup [END] */
 
 });

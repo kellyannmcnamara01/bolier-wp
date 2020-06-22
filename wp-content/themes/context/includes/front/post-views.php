@@ -1,6 +1,9 @@
 <?php
 
-    /* source: https://gretathemes.com/count-post-views/ */
+    /* sources:
+     *
+     * https://gretathemes.com/count-post-views/
+     * https://www.wpbeginner.com/wp-tutorials/how-to-track-popular-posts-by-views-in-wordpress-without-a-plugin/ */
 
 
 

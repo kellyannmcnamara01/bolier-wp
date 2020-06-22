@@ -142,10 +142,12 @@ endwhile;
 
 
 
+
+
 	<!-- Date Selection
 	============================================= -->
 	<label>Start Date: <input type="date" name="startDateSelection"></label><br>
-	<label>End Date: <input type="date" name="endDateSelection"></label>
+	<label>End Date: <input type="date" name="endDateSelection"></label><br><br>
 
 
 
@@ -156,19 +158,27 @@ endwhile;
 		<option value="DESC">Newest</option>
 		<option value="ASC">Oldest</option>
 		<option value="popular">Popularity</option>
-	</select>
-	
+	</select><br><br>
+
 
 
 
 	<span></span>
+
+
+
 
 	<!-- Hidden input to connect to functions.php -> add_action()
 	============================================= -->
 	<input type="hidden" name="action" value="post_filter">
 
 
+
+
 </form>
+
+
+
 
 <div id="response" style="padding: 50px; background: coral;">
 	<?php
@@ -182,3 +192,7 @@ endwhile;
 		}
 	?>
 </div>
+
+
+
+<?php wp_reset_postdata(); ?>
