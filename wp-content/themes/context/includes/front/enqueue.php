@@ -8,9 +8,11 @@
 
 		/* Styles
 		============================================= */
+		wp_register_style( 'context_icon_styles', $uri . '/assets/fonts/icomoon/style.css', [], $ver );
 		wp_register_style( 'context_styles', $uri . '/assets/dist/css/main.css', [], $ver );
 		wp_register_style( 'context_ie_styles', $uri . '/assets/dist/css/ie-main.css', [], $ver );
 
+		wp_enqueue_style( 'context_icon_styles' );
 		wp_enqueue_style( 'context_styles' );
 
 		/* IE Check <=9 */

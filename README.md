@@ -12,14 +12,14 @@
     - [JS Actions](#js-actions)
     - [Comments](#comments)
 - [Accessibility](#accessibility)
-	- [E-readers text](#e-readers-text)
-	- [Skip to Main Content Btn](#skip-to-main-content-btn)
-	- [Accessible Cards](#accessible-cards)
+    - [E-readers text](#e-readers-text)
+    - [Skip to Main Content Btn](#skip-to-main-content-btn)
+    - [Accessible Cards](#accessible-cards)
 - [Ensuring IE Styling](#ensuring-ie-styling)
 - [The Customizer](#the-customizer)
-	- [Footer Lgeal Customization ](#footer-lgeal-customization)
-	- [Social Links Customization](#social-links-customization)
-	- [Back to Top Btn](#back-to-top-btn-customization)
+    - [Footer Lgeal Customization ](#footer-lgeal-customization)
+    - [Social Links Customization](#social-links-customization)
+    - [Back to Top Btn](#back-to-top-btn-customization)
 - [Accordions](#accordions)
 - [Tooltips](#tooltips)
 - [Footnotes](#footnotes)
@@ -83,7 +83,7 @@ class="btn btn--large"
 
 ### JS Actions
 - When changing the state of an element with js use class names such as `is-open`, `is-hiding`, `is-fixed` to show/describe the change of state
-- Elements that are targeted by js should have a duplicated class name with the addtiona of `js--` in front. An example of that is `clas-name js--class-name`, this way the scss will not get cluttered with the addtional `js--` and it is easier for a dev to see what elements within the html are targeted by js. This being said if there is a popup and a popup button, you only need to add the addtional `js--` to the button, which is the trigger. 
+- Elements that are targeted by js should have a duplicated class name with the addition of `js--` in front. An example of that is `clas-name js--class-name`, this way the scss will not get cluttered with the additional `js--` and it is easier for a dev to see what elements within the html are targeted by js. This being said if there is a popup and a popup button, you only need to add the additional `js--` to the button, which is the trigger. 
 
 ```html
 <!-- Before Interacted with -->
@@ -132,7 +132,7 @@ The global class `e-reader-only` will visually hide anything it is attached to b
 ```
 
 ### Skip to Main Content Btn
-Part of Context's accessibility standards is to insure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is citical that this is working on every template. 
+Part of Context's accessibility standards is to ensure we have a working *Skip to Main Content* btn for e-readers. Within the header this button is included. It currently is set up to skip the top-bar and go to the html element with the id of `main-content`. It is critical that this is working on every template. 
 
 #### Skip to Main Content Btn Example
 
@@ -160,9 +160,9 @@ Again, it's **important** not to use the accessible card classes as style elemen
 
 ```html
 <li id="post-<?php the_ID(); ?>"  <?php post_class( 'post-card accessible-card js--accessible-card' ); ?> >
-	<h1>Title Placement<h1>
-	<p>Copy Placement...</p>
-	<a href="<?php the_permalink(); ?>" class="post-card__link accessible-card__link js--accessible-card__link" accessible-card-link="post-<?php the_ID(); ?>">Link</a>
+    <h1>Title Placement<h1>
+    <p>Copy Placement...</p>
+    <a href="<?php the_permalink(); ?>" class="post-card__link accessible-card__link js--accessible-card__link" accessible-card-link="post-<?php the_ID(); ?>">Link</a>
 </li>
 ```
 
@@ -174,7 +174,7 @@ Again, it's **important** not to use the accessible card classes as style elemen
 - After the closing div of every `row` insure you add a div with the class `clear-float`
 - The grid scss file is already set up to work so do not edit it unless necessary
 - Duplicate the mixins, typography and variables from /src/styles/globals to src/ie-styles/globals
-- Make the apportiate adjustments within the correct scss files/folders 
+- Make the appropriate adjustments within the correct scss files/folders 
 
 
 ---
@@ -183,8 +183,8 @@ Again, it's **important** not to use the accessible card classes as style elemen
 ## The Customizer
 Currently built into the customer are the following items:
 
-### Footer Lgeal Customization 
-This allows you to currently edit the privacy policy page, terms of conditions and the copyright statment. In the theme's customizer you can edit this under: `customizing -> context custom panel -> footer settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/footer.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `footer.php` file
+### Footer Legal Customization 
+This allows you to currently edit the privacy policy page, terms of conditions and the copyright statement. In the theme's customizer, you can edit this under: `customizing -> context custom panel -> footer settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/footer.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `footer.php` file
 
 ### Social Links Customization
 This allows you to currently edit the social media links in `customizing -> context custom panel -> social settings`. If you wish to edit this in the code by editing/adding/removing options you can do by editing `includes/customizer/social.php`. If you would like to echo any of these custom options within the theme look up `the_permalink( get_theme_mod() )` function. – The current example of these ones are in the `partials/reusables/social-links.php` file
@@ -201,7 +201,7 @@ There is a reusable file you can call within a loop when you want to add an acco
 
 It is important that each accordion has the following attrs set as unique strings:
 - the trigger should have a unique id
-- the pannel should have a unique id
+- the panel should have a unique id
 - the trigger's aria-controls should match the pannel's id
 - the pannel's aria-labelledby should match the trigger's id
 
@@ -226,15 +226,15 @@ Tooltips can either be buttons or inline text. The reusable is file is set up in
 
 It is important that each tooltip has the following attrs set as unique strings:
 - the trigger should have a unique id
-- the pannel should have a unique id
+- the panel should have a unique id
 - the trigger's aria-controls should match the pannel's id
 - the pannel's aria-labelledby should match the trigger's id
 
 Here is an example of the tooltip button:
 ```html
 <span class="tooltip" style="background: khaki;">
-	<button id="tooltip-2-btn" class="tooltip__trigger tooltip__trigger--btn js--tooltip__trigger" aria-expanded="false" aria-controls="tooltip-id-2">Tooltip Btn</button>
-	<span id="tooltip-id-2" class="tooltip__panel" role="tooltip" aria-labelledby="tooltip-2-btn" hidden="true" aria-hidden="true" focusable="false">Tooltip copy placement.</span>
+    <button id="tooltip-2-btn" class="tooltip__trigger tooltip__trigger--btn js--tooltip__trigger" aria-expanded="false" aria-controls="tooltip-id-2">Tooltip Btn</button>
+    <span id="tooltip-id-2" class="tooltip__panel" role="tooltip" aria-labelledby="tooltip-2-btn" hidden="true" aria-hidden="true" focusable="false">Tooltip copy placement.</span>
 </span>
 ```
 
@@ -262,12 +262,12 @@ Here is an example of a footnote:
         <span class="e-reader-only">Open footnote</span>
     </button>
     <div id="footnote-id-1" class="footnote__panel" role="region" aria-labelledby="footnote-1-btn" hidden="true" aria-hidden="true" focusable="false">
-    	<div>
-	        <p>Footnote One: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lectus est.</p>
-	    </div>
+        <div>
+            <p>Footnote One: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac lectus est.</p>
+        </div>
         <button class="footnote__close-btn" content-panel="footnote-id-1" content-trigger="footnote-1-btn">
-        	<span><span class="e-reader-only">Close footnote</span></span>
-			<span></span>
+            <span><span class="e-reader-only">Close footnote</span></span>
+            <span></span>
         </button>
     </div>
 </div>
@@ -355,6 +355,8 @@ How to set up filters
 6. Create a div that will replace it's current contents with the filtered contents
 7. Edit corresponding js file found: assets/src/scripts/partials.ajax-filters.js
 8. Edit corresponsing php file found: includes/front/post-filters.php 
+
+Currently filters are set up to allow for multiple fields to filter by category. You can also filter by tags, popularity, newst, oldest, start/end date and change the layout from rows to blocks. 
 
 ### Ajax Calls
 `assets/src/scripts/partials/ajax-filters.js`

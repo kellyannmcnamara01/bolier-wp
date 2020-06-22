@@ -42,7 +42,7 @@
 			<!-- Top Bar Search
 		    ============================================= -->
 		    <div class="col-xs-3">
-		    	<button class="top-bar__search-toggle js--top-bar__search-toggle"><span role="img" aria-label="open search panel">[search icon placement]</span></button>
+		    	<button class="top-bar__search-toggle js--top-bar__search-toggle"><span role="img" aria-label="open search panel"><i role="img" class="icon-search"></i></span></button>
 		    </div>
 		    <?php
 
