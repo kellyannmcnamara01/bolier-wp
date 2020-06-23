@@ -3,18 +3,21 @@
 
   <?php if( has_post_thumbnail() ){ ?>
     <div class="post-card__image">
-      <?php 
-        the_post_thumbnail( 'medium', [ 
-          'class' => 'post-thumbnail-class' 
-        ] ); 
+
+      <?php
+        $thumb_id = get_post_thumbnail_id( get_the_ID() );
+        $thumb_alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+        $thumb_src = wp_get_attachment_url( get_post_thumbnail_id() );
       ?>
+      <img alt="<?php echo $thumb_alt; ?>" src="<?php echo $thumb_src; ?>" class="post-thumbnail-class" width="100%">
+
     </div>
   <?php } ?>
 
 
-  <h3 class="post-card__title">
+  <p class="post-card__title">
     <?php the_title(); ?>
-  </h3>
+  </p>
 
 
   <span class="post-card__date">

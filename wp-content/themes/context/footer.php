@@ -1,7 +1,7 @@
             <!-- Footer
             ============================================= -->
             <footer id="footer" class="footer" style="background: cornflowerblue; color: white; padding: 30px; font-size: 30px;">
-                <p>--- footer content ---</p>
+                <h2>--- footer content ---</h2>
 
 
 

@@ -45,12 +45,15 @@
 
 								<?php if( has_post_thumbnail() ) { ?>
 									<div class="post-content__image">
-										<a href="<?php the_permalink(); ?>">
-										<?php 
-											the_post_thumbnail( 'medium', [ 
-												'class' => 'post-thumbnail-class' 
-											] ); 
+										<?php
+											$thumb_id = get_post_thumbnail_id( get_the_ID() );
+											$thumb_alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
+											$thumb_src = wp_get_attachment_url( get_post_thumbnail_id() );
 										?>
+										<a href="<?php the_permalink(); ?>">
+
+											<img alt="<?php echo $thumb_alt; ?>" src="<?php echo $thumb_src; ?>" width="100%">
+
 										</a>
 									</div>
 								<?php } ?>

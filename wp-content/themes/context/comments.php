@@ -24,7 +24,7 @@
 					foreach( $comments as $comment ){ 
 						?>
 							<div class="comment">
-								<span class="comment__avatar"><?php echo get_avatar( $comment, 60, '', 'alt text', [ 'class' => 'avatar-class' ] ); ?></span>
+								<span class="comment__avatar"><?php echo get_avatar( $comment, 60, '', '', [ 'class' => 'avatar-class' ] ); ?></span>
 								<span class="comment__author"><?php comment_author(); ?></span>
 								<span class="comment__date"><?php comment_date(); ?></span>
 								<span class="comment__text"><?php comment_text(); ?></span>
@@ -47,20 +47,20 @@
 		<?php comment_form( [
 			'comment_field'		=>	'<div class="form-field">
 										<label for="comment">' . __( 'Comment', 'context' ) . '</label>
-										<textarea name="comment"></textarea>
+										<textarea name="comment" id="comment"></textarea>
 									</div>',
 			'fields'			=>	[
 				'author'		=>	'<div class="form-field">
 										<label for="author">' . __( 'author', 'context' ) . '</label>
-										<input type="text" name="author"/>
+										<input type="text" name="author" id="author"/>
 									</div>',
 				'email'		=>	'<div class="form-field">
 										<label for="email">' . __( 'email', 'context' ) . '</label>
-										<input type="email" name="email"/>
+										<input type="email" name="email" id="email"/>
 									</div>',
 				'url'		=>	'<div class="form-field">
 										<label for="url">' . __( 'url', 'context' ) . '</label>
-										<input type="text" name="url"/>
+										<input type="text" name="url" id="url"/>
 									</div>'
 			],
 			'class_submit'		=>	'comments-form__submit',

@@ -56,15 +56,6 @@
 
 
 
-	<?php 
-$popularpost = new WP_Query( array( 'posts_per_page' => 4, 'meta_key' => 'post_views_count', 'orderby' => 'meta_value_num', 'order' => 'DESC'  ) );
-while ( $popularpost->have_posts() ) : $popularpost->the_post();
- 
-the_title();
- 
-endwhile;
-?>
-
 
 
 	<!-- Dropdown categories
@@ -73,12 +64,12 @@ endwhile;
 
 		if( $terms = get_terms( $termsArray ) ) {
  
-			echo '<div>Select General Category</div><select name="categoryfilterdropdown">';
+			echo '<label>Select General Category <select id="categoryfilterdropdown" name="categoryfilterdropdown">';
 			echo '<option value="">Select a Category</option>';
 			foreach ( $terms as $term ) {
 				echo '<option value="' . $term->term_id . '">' . $term->name . '</option>';
 			}
-			echo '</select><br><br>';
+			echo '</select></label><br><br>';
 		}
 
 	?>
@@ -92,11 +83,11 @@ endwhile;
 
 		if( $terms = get_terms( $termsColourArray ) ){
 
-			echo '<div><div>Select Colours</div>';
+			echo '<fieldset><legend>Select Colours</legend>';
 			foreach ( $terms as $term ) {
 				echo '<label><input type="checkbox" name="categoryfiltercheckboxes[]" value="' . $term->term_id . '" />' . $term->name . '</label>';
 			}
-			echo '</div><br><br>';
+			echo '</fieldset><br><br>';
 
 		}
 
@@ -111,11 +102,11 @@ endwhile;
 
 		if( $terms = get_terms( $termsPlacesArray ) ){
 
-			echo '<div><div>Select a Location</div>';
+			echo '<fieldset><legend>Select a Location</legend>';
 			foreach ( $terms as $term ) {
 				echo '<label><input type="radio" name="categoryfilterradios[]" value="' . $term->term_id . '" />' . $term->name . '</label>';
 			}
-			echo '</div><br><br>';
+			echo '</fieldset><br><br>';
 
 		}
 
@@ -130,11 +121,11 @@ endwhile;
 
 		if( $tags ){
 
-			echo '<div><div>Select Tags</div>';
+			echo '<fieldset><legend>Select Tags</legend>';
 			foreach ( $tags as $tag ) {
 				echo '<label><input type="checkbox" name="tagcheckboxes[]" value="' . $tag->ID . '" />' . $tag->name . '</label>';
 			}
-			echo '</div><br><br>';
+			echo '</fieldset><br><br>';
 
 		}
 
@@ -154,21 +145,24 @@ endwhile;
 
 	<!-- Date order dropdown
 	============================================= -->
-	<select name="orderby">
-		<option value="DESC">Newest</option>
-		<option value="ASC">Oldest</option>
-		<option value="popular">Popularity</option>
-	</select><br><br>
+	<label> Order By:
+		<select name="orderby">
+			<option value="DESC">Newest</option>
+			<option value="ASC">Oldest</option>
+			<option value="popular">Popularity</option>
+		</select>
+	</label><br><br>
 
 
 
 
 	<!-- Layout style radios
 	============================================= -->
-	<div><div>Select a Location</div>
-	<label><input type="radio" name="layoutStyle" value="rows" />Rows</label>
-	<label><input type="radio" name="layoutStyle" value="blocks" />Blocks</label>
-	</div><br><br>
+	<fieldset>
+		<legend>>Select a Location</legend>
+		<label><input type="radio" name="layoutStyle" value="rows" />Rows</label>
+		<label><input type="radio" name="layoutStyle" value="blocks" />Blocks</label>
+	</fieldset><br><br>
 
 
 

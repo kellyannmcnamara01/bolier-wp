@@ -9,8 +9,8 @@
 				 * Will need to be replaced with whatever platform form the client uses
 			============================================= -->
 			<form>
-				<lable>Name:<input type="text" name="name"></lable><br>
-				<lable>Email:<input type="email" name="email"></lable><br>
+				<label>Name:<input type="text" name="name"></label><br>
+				<label>Email:<input type="email" name="email"></label><br>
 				<input type="submit" name="submit" value="signup">
 			</form>
 			<!-- Form [END] -->

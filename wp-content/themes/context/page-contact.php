@@ -35,7 +35,7 @@
 
 		<div class="row">
 			<div class="col-xs-12">
-				<form class="row" style="padding: 30px; background: darkviolet; color: #fff;">
+				<form class="row form" style="padding: 30px; background: darkviolet; color: #fff;">
 
 
 
@@ -90,6 +90,16 @@
 
 
 
+					<!-- Password Input Example
+					============================================= -->
+					<div class="form-field col-xs-4">
+						<label for="password">Password:</label>
+						<input type="password" name="password" id="password">
+					</div>
+
+
+
+
 					<!-- Range Input Example
 					============================================= -->
 					<div class="form-field col-xs-4">
@@ -105,16 +115,6 @@
 					<div class="form-field col-xs-4">
 						<label for="color">Color Field:</label>
 						<input type="color" name="color" id="color">
-					</div>
-
-
-
-
-					<!-- Password Input Example
-					============================================= -->
-					<div class="form-field col-xs-4">
-						<label for="password">Password:</label>
-						<input type="password" name="password" id="password">
 					</div>
 
 
@@ -214,9 +214,9 @@
 
 					<!-- Buttons
 					============================================= -->
-					<input type="submit" name="submit" value="Submit Search">
+					<input type="submit" name="submit" value="Submit">
 					<input type="reset" name="reset" value="Reset">
-					<button>Activate</button>s
+					<button>Button</button>
 
 
 				</form>
