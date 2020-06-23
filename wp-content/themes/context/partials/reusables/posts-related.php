@@ -28,9 +28,7 @@
 										$thumb_alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
 										$thumb_src = wp_get_attachment_url( get_post_thumbnail_id() );
 									?>
-									<a href="<?php the_permalink(); ?>" class="related-post__image">
-										<img alt="<?php echo $thumb_alt; ?>" src="<?php echo $thumb_src; ?>" width="100%">
-									</a>
+									<img alt="<?php echo $thumb_alt; ?>" src="<?php echo $thumb_src; ?>" width="100%">
 								<?php
 							}
 						?>
