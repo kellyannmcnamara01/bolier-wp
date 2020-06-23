@@ -87,10 +87,55 @@
         }
 
         highlightSearchedTerm('.js--search__title');
-        highlightSearchedTerm('.post-card__title');
+        // highlightSearchedTerm('.post-card__title');
         highlightSearchedTerm('.post-card__author');
         highlightSearchedTerm('.post-card__categories');
         highlightSearchedTerm('.post-card p');
+
+
+
+
+
+
+
+
+        searchArray = lowercaseSearch.split(' ');
+        console.log(searchArray);
+
+
+        function highlightSearchedArray(element){
+            for (var i = 0; i < searchArray.length; i++) {
+                console.log('============= ' + searchArray[i] + ' =============');
+
+                jQuery(element).each(function(){
+                    var inner = jQuery(this).html();
+                    var innerToString = inner.toString();
+                    var innerStringLowercase = innerToString.toLowerCase();
+                    var matchStr =  innerStringLowercase.match(searchArray[i]);
+
+                    if (matchStr != null) {
+                        console.log('idk: ' + matchStr);
+                        var indexStart = innerStringLowercase.indexOf(searchArray[i]);
+                        console.log('idk start: ' + indexStart);
+                        var indexEnd = indexStart + searchArray[i].length;
+                        console.log('idk end: ' + indexEnd);
+                        var highlightOutput = inner.substring(0, indexStart) + "<span class='highlight--sub'>" + inner.substring(indexStart, indexEnd) + "</span>" + inner.substring(indexEnd);
+                        jQuery(this).html(highlightOutput);
+                    }
+                });
+            }
+        }
+
+        // highlightSearchedArray('.post-card__title');
+        highlightSearchedArray('.post-card__author');
+        highlightSearchedArray('.post-card__categories');
+        highlightSearchedArray('.post-card p');
+
+
+
+
+
+
         /* Search Highlight [END] */
     </script>
 
