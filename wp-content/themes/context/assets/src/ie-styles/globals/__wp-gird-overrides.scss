@@ -1,0 +1,67 @@
+/* WP Block Columns (fourced by WP)
+============================================= */
+.wp-block-columns {
+	@extend .row;
+	margin-left: -$row-gutter-width;
+	margin-right: -$row-gutter-width;
+}
+
+/* WP Block Columns Matching Site's Media Queries
+============================================= */
+.wp-block-column {
+	flex-basis: 1 !important;
+	flex-grow: 1 !important;
+}
+[style="flex-basis:33.33%"] {
+	flex-basis: 1;
+}
+
+[style="flex-basis:66.66%"] {
+	flex-basis: 1;
+}
+
+@include above-phone-large {
+	.wp-block-column {
+		flex-basis: calc( 50% - #{$col-gutter-width--total} ) !important;
+		flex-grow: 1 !important;
+	}
+	[style="flex-basis:25%"] {
+		flex-basis: calc( 40% - #{$col-gutter-width--total} ) !important;
+	}
+
+	[style="flex-basis:33.33%"] {
+		flex-basis: calc( 40% - #{$col-gutter-width--total} ) !important;
+	}
+
+	[style="flex-basis:50%"] {
+		flex-basis: calc( 60% - #{$col-gutter-width--total} ) !important;
+	}
+
+	[style="flex-basis:66.66%"] {
+		flex-basis: calc( 60% - #{$col-gutter-width--total} ) !important;
+	}
+}
+
+@include above-tablet {
+	.wp-block-column {
+		flex-basis: 0 !important;
+	}
+
+	[style="flex-basis:25%"] {
+		flex-basis: calc( 25% - #{$col-gutter-width--total} ) !important;
+	}
+
+	[style="flex-basis:33.33%"] {
+		flex-basis: calc( 33.33% - #{$col-gutter-width--total} ) !important;
+	}
+
+	[style="flex-basis:50%"] {
+		flex-basis: calc( 50% - #{$col-gutter-width--total} ) !important;
+	}
+
+	[style="flex-basis:66.66%"] {
+		flex-basis: calc( 66.66% - #{$col-gutter-width--total} ) !important;
+	}
+}
+
+

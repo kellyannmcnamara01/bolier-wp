@@ -51,6 +51,8 @@ $row-gutter-width--total: calc( #{$row-gutter-width} * 2 );
 $col-gutter-width: 1rem;
 $col-gutter-width--total: calc( #{$col-gutter-width} * 2 );
 
+$col-margin-bottom: 2rem;
+
 $width-1: 8.33333333%;
 $width-2: 16.66666667%;
 $width-3: 25%;
