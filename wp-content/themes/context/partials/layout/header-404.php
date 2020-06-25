@@ -2,7 +2,21 @@
 
 	<!-- Breadcrumbs
     ============================================= -->
-    <?php breadcrumbs(); ?>
+    <div class="row">
+    	<div class="col-xs-12">
+    		<?php 
+
+			    if( is_front_page() ) {
+			    	echo '<ul class="breadcrumbs"><li>';
+			    	echo get_bloginfo( 'name' );
+			    	echo '</li></ul>';
+			    } else {
+			    	breadcrumbs();
+			    } 
+
+		    ?>
+    	</div>
+    </div>
 
 
     
