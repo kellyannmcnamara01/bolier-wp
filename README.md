@@ -47,6 +47,8 @@
 - custom theme options in the customizer
 - page navigation (not wp enabled)
 - email popup after 5s (uses cookies)
+- window width throttle js function
+- scroll throttle js function
 
 
 ---
@@ -392,4 +394,13 @@ To update the current icomoon library, simple head to [icomoon](https://icomoon.
 When naming the svg files you upload makesure you **do not** include the name icon in the file name. Icomoon will automatically add the word `icon-` infront of every icon. 
 
 Additionally, to make sure that icons are accessible it is **required** to add `role="img"` to the `<i>` tag. 
+
+
+
+---
+
+
+
+## Admin Editor Font Sizes
+To adjust the font sizes that are set defaults within the admin editor/page builder go to `includes/setup.php` and adjust the  `add_theme_support -> editor-font-sizes`. Make sure they align with the styles in the `typography.scss` file. 
 
