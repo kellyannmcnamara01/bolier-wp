@@ -33,6 +33,7 @@
     - [Ajax Calls](#ajax-calls)
     - [PHP Filter Queries](#php-filter-queries)
 - [Icon Library](#icon-library)
+- [Admin Editor Font Sizes](#admin-editor-font-sizes)
 
 
 ---
