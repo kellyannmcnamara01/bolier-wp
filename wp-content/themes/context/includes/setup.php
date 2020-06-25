@@ -5,17 +5,86 @@
 
 		/* Add Theme Support
         ============================================= */
-		add_theme_support( 'post-thumbnails' ); // add support for post thumbnails
-		add_theme_support( 'title-tag' ); // add support for custom title
-		add_theme_support( 'custom-logo' ); // add support for custom logo in customizer
-		add_theme_support( 'automatic-feed-links' ); // add support/creation for/of rrs feeds
+
+        /* add support for post thumbnails  */
+		add_theme_support( 'post-thumbnails' );
+
+
+
+
+		/* add support for custom title  */
+		add_theme_support( 'title-tag' );
+
+
+
+
+		/* add support for custom logo in customizer  */
+		add_theme_support( 'custom-logo' );
+
+
+
+
+		/*  add support/creation for/of rrs feeds  */
+		add_theme_support( 'automatic-feed-links' );
+
+
+
+
+		/*  add support for html 5  */
 		add_theme_support( 'html5', array( 
 			'comment-list', 
 			'comment-form', 
 			'search-form', 
 			'gallery', 
 			'caption' 
-		) ); // add support for html 5
+		) );
+
+
+
+
+		/*  add support for admin editor font sizes  
+		 *  these font sizes should match the corresponding classes/vars within the typography style sheet
+		 *  --> src/styles/globals/__typography.scss file */
+		add_theme_support(
+	    	'editor-font-sizes', 
+		    array(
+		    	array(
+		            'name'      => __( 'Small', 'context' ),
+		            'shortName' => __( 'S', 'context' ),
+		            'size'      => 14,
+		            'slug'      => 'small'
+		        ),
+		        array(
+		            'name'      => __( 'Normal', 'context' ),
+		            'shortName' => __( 'N', 'context' ),
+		            'size'      => 16,
+		            'slug'      => 'normal'
+		        ),
+		        array(
+		            'name'      => __( 'Medium', 'context' ),
+		            'shortName' => __( 'M', 'context' ),
+		            'size'      => 19,
+		            'slug'      => 'medium'
+		        ),
+		        array(
+		            'name'      => __( 'Large', 'context' ),
+		            'shortName' => __( 'L', 'context' ),
+		            'size'      => 24,
+		            'slug'      => 'large'
+		        ),
+		        array(
+		            'name'      => __( 'Huge', 'context' ),
+		            'shortName' => __( 'H', 'context' ),
+		            'size'      => 29,
+		            'slug'      => 'huge'
+		        )
+		    )
+		);
+
+
+
+
+		/*  add placeholder content when theme is freshly installed & there is no content within the database  */
 		add_theme_support( 'starter-content', [
 			// widgets: determin what core-defined widgets are displayed
 			'widgets'				=> [
@@ -77,7 +146,15 @@
 					)
 				)
 			],
-		] ); // add placeholder content when theme is freshly installed & there is no content within the database
+		] );
+
+
+
+
+		/* Add Post Type Support
+        ============================================= */
+		add_post_type_support( 'page', 'excerpt' );
+
 
 
 
