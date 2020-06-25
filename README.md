@@ -49,6 +49,8 @@
 - email popup after 5s (uses cookies)
 - window width throttle js function
 - scroll throttle js function
+- wp grid override styles
+- add_post_type_support( 'page', 'excerpt' )
 
 
 ---
