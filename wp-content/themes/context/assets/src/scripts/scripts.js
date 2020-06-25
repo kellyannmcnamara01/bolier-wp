@@ -1,6 +1,7 @@
 /* INDEX
 =============================================
  * Scroll Throttle
+ * Resize Throttle
  * On Page Scroll
  * Top Bar Search
  * Back to Top
@@ -31,6 +32,29 @@ jQuery(document).ready(function($) {
 				onPageScroll();
 				scrollThrottle = null;
 			},75);
+		}
+	});
+	/* Scroll Throttle [END] */
+
+
+
+
+	/* Resize Throttle
+	============================================= */
+	// * create and empty var
+	var resizeThrottle;
+
+	// * on reisze of window execute code
+	$(window).bind('resize',function(){
+
+		// * check if resizeThrottle is null, if it is execute function and reset to null. do this every 150ms;
+		// * throttling will help with the CPU and load time of a website.
+		if (!resizeThrottle) {
+			resizeThrottle = setTimeout(function(){
+				
+				pagePaddingTop();
+				resizeThrottle = null;
+			},150);
 		}
 	});
 	/* Scroll Throttle [END] */
