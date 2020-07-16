@@ -1,0 +1,21 @@
+/* Admin Panel Adjustments
+ *
+ * hide image dimentions
+============================================= */
+.block-editor-image-size-control {
+	display: none;
+}
+
+
+/* test settign preset size full width select 
+============================================= */
+.components-button.is-small {
+	// width: 100%;
+}
+
+
+
+
+.wp-block {
+	max-width: 1200px;
+}

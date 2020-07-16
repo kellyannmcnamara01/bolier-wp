@@ -21,6 +21,7 @@
 	include( get_theme_file_path( '/includes/customizer/enqueue.php' ) );
 	include( get_theme_file_path( '/includes/front/post-filters.php' ) );
 	include( get_theme_file_path( '/includes/front/post-views.php' ) );
+	include( get_theme_file_path( '/includes/admin/enqueue.php' ) );
 
 
 
@@ -34,6 +35,10 @@
 	add_action( 'customize_preview_init', 'context_customize_preview_init' );
 	add_action( 'wp_ajax_post_filter', 'context_post_filters_function' ); // wp_ajax_{ACTION HERE} 
 	add_action( 'wp_ajax_nopriv_post_filter', 'context_post_filters_function' ); // wp_ajax_nopriv_{ACTION HERE} 
+	add_action( 'admin_init', 'context_editor_styles' );
+	add_action( 'enqueue_block_editor_assets', 'context_admin_scripts' );
+
+	// add_action( 'acf/init', 'context_acf_register_blocks' );
 
 
 

@@ -65,6 +65,15 @@ gulp.task('iesass', function(){
         .pipe(gulp.dest('assets/dist/css'));
 });
 
+// Admin SCSS Task
+gulp.task('adminsass', function(){
+    return gulp.src('assets/src/admin-styles/**/*.scss')
+        .pipe(sass())
+        .pipe(cssnano())
+        .pipe(browserSync.stream())
+        .pipe(gulp.dest('assets/dist/css'));
+});
+
 
 
 
@@ -115,6 +124,7 @@ gulp.task('watch', function(){
 
     gulp.watch('assets/src/styles/**/*.scss', gulp.series('sass'));
     gulp.watch('assets/src/ie-styles/**/*.scss', gulp.series('iesass'));
+    gulp.watch('assets/src/admin-styles/**/*.scss', gulp.series('adminsass'));
     gulp.watch('assets/src/scripts/**/*.js', gulp.series('js'));
 });
 
@@ -127,7 +137,7 @@ gulp.task('watch', function(){
  * What we’d like to do is run the Sass and JS tasks once, then run the Watch task to re-run tasks when files are changed.
 ============================================= */
 
-gulp.task('default', gulp.series('sass', 'iesass', 'js', 'watch'));
+gulp.task('default', gulp.series('sass', 'iesass', 'adminsass', 'js', 'watch'));
 
 
 
