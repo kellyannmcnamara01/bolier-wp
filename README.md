@@ -34,6 +34,7 @@
     - [PHP Filter Queries](#php-filter-queries)
 - [Icon Library](#icon-library)
 - [Admin Editor Font Sizes](#admin-editor-font-sizes)
+- [Admin Editor Colour Palette](#admin-editor-colour-palette)
 
 
 ---
@@ -405,4 +406,16 @@ Additionally, to make sure that icons are accessible it is **required** to add `
 
 ## Admin Editor Font Sizes
 To adjust the font sizes that are set defaults within the admin editor/page builder go to `includes/setup.php` and adjust the  `add_theme_support -> editor-font-sizes`. Make sure they align with the styles in the `typography.scss` file. 
+
+
+
+---
+
+
+
+## Admin Editor Colour Palette
+To adjust the Colour Palette that are set defaults within the admin editor/page builder go to `includes/setup.php` and adjust the  `add_theme_support -> editor-color-palette`. Make sure they align with the styles in the `__variables.scss` file.
+
+[Useful article](https://www.billerickson.net/wordpress-color-palette-button-styling-gutenberg/)
+
 
