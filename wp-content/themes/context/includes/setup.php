@@ -6,31 +6,67 @@
 		/* Add Theme Support
         ============================================= */
 
-        /* add support for post thumbnails  */
+
+
+
+        /* add support for post thumbnails
+        ============================================= */
 		add_theme_support( 'post-thumbnails' );
 
 
 
 
-		/* add support for custom title  */
+		/* add support for wp to manage title tag
+		============================================= */
 		add_theme_support( 'title-tag' );
 
 
 
 
-		/* add support for custom logo in customizer  */
+		/* add support for custom logo in customizer
+		============================================= */
 		add_theme_support( 'custom-logo' );
 
 
 
 
-		/*  add support/creation for/of rrs feeds  */
+		/* Add Post Type Support
+        ============================================= */
+		add_post_type_support( 'page', 'excerpt' );
+
+
+
+
+		/*  add support/creation for/of rrs feeds 
+		============================================= */
 		add_theme_support( 'automatic-feed-links' );
 
 
 
 
-		/*  add support for html 5  */
+		/*  add support for selective refresh for widgets 
+		============================================= */
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+
+
+
+		/*  add support for default block styles 
+		============================================= */
+		add_theme_support( 'wp-block-styles' );
+
+
+
+
+		/*  add support for resoinsive embeds 
+		============================================= */
+		add_theme_support( 'responsive-embeds' );
+
+
+
+
+		/*  add support for html 5
+		============================================= */
 		add_theme_support( 'html5', array( 
 			'comment-list', 
 			'comment-form', 
@@ -80,6 +116,59 @@
 		        )
 		    )
 		);
+
+
+
+
+		/*  add support for admin editor colour palette  
+		 *  these colours should match the corresponding vars within the variables style sheet
+		 *  --> src/styles/globals/__variables.scss file
+		 * example commented out below:
+		 ============================================= */
+		// add_theme_support( 
+		// 	'editor-color-palette', 
+		// 	array(
+		// 		array(
+		// 			'name'  => __( 'Dark Grey', 'context' ),
+		// 			'slug'  => 'darkgrey',
+		// 			'color'	=> '#363636',
+		// 		),
+		// 		array(
+		// 			'name'  => __( 'Light Grey', 'context' ),
+		// 			'slug'  => 'lightgrey',
+		// 			'color' => '#F5F5F5',
+		// 		),
+		// 	)
+		// );
+
+
+
+
+		/*  disable/hide admin editor colour palette
+		============================================= */
+		add_theme_support( 'editor-color-palette' );
+
+
+
+
+		/* Disable Custom Gradients in Admin Editor
+        ============================================= */
+		add_theme_support( 'disable-custom-gradients' );
+		add_theme_support( 'editor-gradient-presets', array() );
+
+
+
+
+		/* Disable Custom Colour Btn
+        ============================================= */
+		add_theme_support( 'disable-custom-colors' );
+
+
+
+
+		/* Disable Custom Font Size
+        ============================================= */
+		add_theme_support( 'disable-custom-font-sizes' );
 
 
 
@@ -151,9 +240,25 @@
 
 
 
-		/* Add Post Type Support
+		/* Add Image Crops
         ============================================= */
-		add_post_type_support( 'page', 'excerpt' );
+		add_image_size( 'team-member-card', 368, 265, true );
+		add_image_size( 'team-member-card@x2', 736, 530, true );
+
+		add_image_size( 'image-full', 1200);
+		add_image_size( 'image-full@x2', 2400);
+
+		add_image_size( 'image-six-col', 600);
+		add_image_size( 'image-six-col@x2', 1200);
+
+		add_image_size( 'image-four-col', 400);
+		add_image_size( 'image-four-col@x2', 800);
+
+		add_image_size( 'image-three-col', 300);
+		add_image_size( 'image-three-col@x2', 600);
+
+		add_image_size( 'isotope-img', 9999, 475);
+		add_image_size( 'isotope-img@x2', 9999, 950);
 
 
 
